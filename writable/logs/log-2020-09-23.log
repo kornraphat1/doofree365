@@ -1,0 +1,82 @@
+CRITICAL - 2020-09-23 00:36:33 --> Undefined variable: index
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\series.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 193, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/serie...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(688): view('templates/serie...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->get_ep_series('9797', 'Dr.-Romantic-Se...')
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-23 00:38:26 --> Undefined variable: index
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\series.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 193, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/serie...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(688): view('templates/serie...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->get_ep_series('9797', 'Dr.-Romantic-Se...')
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-23 00:38:52 --> Undefined variable: vdorandom
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\series.php(557): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 557, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/serie...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(688): view('templates/serie...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->get_ep_series('9797', 'Dr.-Romantic-Se...')
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-23 00:42:34 --> Too few arguments to function App\Controllers\Home::video(), 1 passed in C:\xampp\htdocs\newmovie2\system\CodeIgniter.php on line 910 and exactly 2 expected
+#0 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->video('7846')
+#1 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-23 00:43:06 --> Undefined variable: list_video
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\newmovie.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 73, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/newmo...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(134): view('templates/newmo...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->new_movie()
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-23 00:44:04 --> Undefined variable: list_video
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\newmovie.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 73, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/newmo...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(134): view('templates/newmo...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->new_movie()
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-23 00:45:18 --> Too few arguments to function App\Controllers\Home::video(), 1 passed in C:\xampp\htdocs\newmovie2\system\CodeIgniter.php on line 910 and exactly 2 expected
+#0 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->video('9738')
+#1 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-23 00:47:42 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\body2.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-23 00:54:23 --> Undefined index: name_ep
+#0 C:\xampp\htdocs\newmovie2\app\Views\templates\video.php(195): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 195, Array)
+#1 C:\xampp\htdocs\newmovie2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\newmovie2\system\Common.php(1071): CodeIgniter\View\View->render('templates/video...', Array, true)
+#3 C:\xampp\htdocs\newmovie2\app\Controllers\Home.php(481): view('templates/video...', Array)
+#4 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(910): App\Controllers\Home->video('9662')
+#5 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\newmovie2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\newmovie2\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

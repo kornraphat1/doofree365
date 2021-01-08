@@ -21,8 +21,10 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:99/public/';
-
+	// public $baseURL = 'http://doonungset1.varietyphp.com/';
+	// public $baseURL = 'http://doofree365.com/public/';
+	public $baseURL = 'http://localhost:9221/public/'
+	;
 	/*
 	|--------------------------------------------------------------------------
 	| Index File
