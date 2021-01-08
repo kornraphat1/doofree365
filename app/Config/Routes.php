@@ -55,6 +55,15 @@ $routes->get('/series/(:num)/(:any)', 'Home::get_ep_series/$1/$2');
 $routes->get('/page/categoty/series', 'Home::list_series/');
 
 
+
+
+
+//365
+$routes->get('/body', 'Home::body');
+$routes->get('/list', 'Home::list');
+$routes->get('/play', 'Home::play');
+$routes->get('/dcontract', 'Home::dcontract');
+$routes->get('/cate', 'Home::cate');
 /**
  * --------------------------------------------------------------------
  * Additional Routing

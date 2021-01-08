@@ -1,26 +1,4 @@
-<style>
-    footer .container {
-        padding: 41px 0px 0px 0px;
-        color: #fff;
-        width: 90%;
-    }
 
-    footer .footer-logo {
-        text-align: center;
-        margin-top: 40px;
-
-    }
-
-    footer .footer-img {
-        width: 15%;
-    }
-
-    @media screen and (min-device-width: 280px) and (max-device-width: 1024px) {
-        footer .footer-img {
-        width: 30%;
-    }
-    }
-</style>
 
 <footer>
 

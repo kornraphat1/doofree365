@@ -54,8 +54,8 @@ class Home extends BaseController
 			'keyword_string' => $keyword_string,
 			'category_id' => $category_id,
 			'path_imgads' => $path_imgads,
-			'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 			'setting' => $setting
 		];
 
@@ -108,8 +108,8 @@ class Home extends BaseController
 			'keyword_string' => $keyword_string,
 			'category_id' => $category_id,
 			'path_imgads' => $path_imgads,
-			'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 			'setting' => $setting
 		];
 
@@ -160,8 +160,8 @@ class Home extends BaseController
 			'keyword_string' => $keyword_string,
 			'cate' => $category_id,
 			'path_imgads' => $path_imgads,
-			'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 			'path_livesteram' => $path_livesteram,
 			'setting' => $setting
 		];
@@ -208,8 +208,8 @@ class Home extends BaseController
 			'keyword_string' => $keyword_string,
 			'category_id' => $category_id,
 			'path_imgads' => $path_imgads,
-			'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 			'path_livesteram' => $path_livesteram,
 			'listcontent' =>  $listcontent,
 			'setting' => $setting
@@ -269,8 +269,8 @@ class Home extends BaseController
 			'path_imgads' => $path_imgads,
 			'path_livesteram' => $path_livesteram,
 			'listcontent' =>  $listcontent,
-				'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 			'setting' => $setting
 		];
 
@@ -321,7 +321,7 @@ class Home extends BaseController
 		$feildplay = "";
 		$video_data = $this->VideoModel->get_id_video($id);
 		$category_id = $this->VideoModel->get_category($this->branch);
-		
+
 		$path_livesteram = $this->VideoModel->get_path_livesteram();
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$setting = $this->VideoModel->get_setting($this->branch);
@@ -393,8 +393,8 @@ class Home extends BaseController
 			'discription_web' => $discription_web,
 			'get_img_og' => $get_img_og,
 			'setting' => $setting,
-			'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 		];
 
 		$data = [
@@ -457,7 +457,7 @@ class Home extends BaseController
 		}
 		$keyword_string = urldecode($keyword_string);
 		$title = $keyword_string;
-		$category_id = $this->VideoModel->get_category($this->branch);	
+		$category_id = $this->VideoModel->get_category($this->branch);
 		$listyear = $this->VideoModel->get_listyear($this->branch);
 		$list_video = $this->VideoModel->get_list_video_search($keyword_string, $this->branch_id, $page);
 
@@ -478,8 +478,8 @@ class Home extends BaseController
 			'path_livesteram' => $path_livesteram,
 			'listcontent' =>  $listcontent,
 			'setting' => $setting,
-			'path_ads'=> $this->path_ads,
-			'path_logo'=> $this->path_logo,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
 		];
 
 
@@ -494,7 +494,7 @@ class Home extends BaseController
 		];
 
 
-		echo view('templates/header',$headdata  );
+		echo view('templates/header', $headdata);
 
 		echo view('templates/search', $list_data_video);
 		echo view('templates/footer');
@@ -711,8 +711,8 @@ class Home extends BaseController
 			'feildplay' => $feildplay,
 			'list_video' => $list_video['list'],
 			'name_videos' => $name_videos,
-			
-		
+
+
 		];
 
 		echo view('templates/header-video.php', $header_data);
@@ -722,13 +722,13 @@ class Home extends BaseController
 
 	public function list_series()
 	{
-		$title ='hh' ;
+		$title = 'hh';
 		$page = 1;
 		if (!empty($_GET['page'])) {
 			$page = $_GET['page'];
 		}
 
-		$list_video = $this->VideoModel->get_list_video_series( $this->branch_id, $page);
+		$list_video = $this->VideoModel->get_list_video_series($this->branch_id, $page);
 
 		$keyword_string = "";
 		$category_id = $this->VideoModel->get_category($this->branch);
@@ -769,6 +769,46 @@ class Home extends BaseController
 	// Add movie view
 	public function save_movie_view($movie_id, $branch)
 	{
-		$this->VideoModel->movie_view($movie_id,$branch);
+		$this->VideoModel->movie_view($movie_id, $branch);
+	}
+
+	public function body()
+	{
+		// $a = $this->VideoModel->getdata('hhikihggt');
+		// print_r ($a) ;
+		echo view('/templatesv2/header.php');
+		echo view('/templatesv2/body');
+		echo view('/templatesv2/footer.php');
+	}
+	public function list()
+	{
+		echo view('/templatesv2/header.php');
+		echo view('/templatesv2/list');
+		echo view('/templatesv2/footer.php');
+	}
+	public function play()
+	{
+		$id = 73;
+		$a = $this->VideoModel->getdata($id);
+		// print_r($a);
+		$data = [
+			'a' => $a,
+
+		];
+		echo view('/templatesv2/header.php');
+		echo view('/templatesv2/play', $data);
+		echo view('/templatesv2/footer.php');
+	}
+	public function dcontract()
+	{
+		echo view('/templatesv2/header.php');
+		echo view('/templatesv2/dcontract');
+		echo view('/templatesv2/footer.php');
+	}
+	public function cate()
+	{
+		echo view('/templatesv2/header.php');
+		echo view('/templatesv2/cate');
+		echo view('/templatesv2/footer.php');
 	}
 }
