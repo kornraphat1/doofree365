@@ -1,19 +1,8 @@
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<body id="homepage">
-
     <div class="container" id="play">
 
 
         <div class="content">
-            <div class="content-video">
-                <div class="AD-style">
-                    โฆษณา
-                </div>
-            </div>
 
 
             
