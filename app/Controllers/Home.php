@@ -224,9 +224,9 @@ class Home extends BaseController
 			'title' => $title
 		];
 
-		echo view('templates/header', $headdata);
-		echo view('templates/search', $list_data_video);
-		echo view('templates/footer');
+		echo view('templatesv2/header', $headdata);
+		echo view('templatesv2/list', $list_data_video);
+		echo view('templatesv2/footer');
 	}
 
 

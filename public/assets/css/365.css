@@ -2,7 +2,8 @@
        font-family: 'Kanit', sans-serif;
        background-color: gray;
        margin: 0;
-       background: url('/public/assets/img/bg.png') #000000 center center fixed;
+       background: url('/public/assets/images/bg/bg.jpg') #000000 center center ;
+
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;

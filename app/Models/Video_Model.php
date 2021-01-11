@@ -683,7 +683,7 @@ public function get_list_video_series($branch_id, $page)
                 WHERE mo_category.branch_id = '$branch' AND mo.movie_id IS NOT NULL
                 GROUP BY mo_category.category_id
                 ORDER BY count(mo_category.category_id) DESC
-                LIMIT 4; ";
+                ; ";
 
       
         $query = $this->db->query($sql);

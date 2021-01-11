@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,603 +17,180 @@
             </div>
             <div class="content-grid">
                 <div class="content-list">
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                    <?php foreach ($list_video as $value) {
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
+                        $id = $value['movie_id'];
+                        $s_replace = [
+                            ")", "(", " ", '%'
+                        ];
+                        $e_replace = [
+                            "", "", "-", '%25'
+                        ];
 
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                        $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_thname'])));
+                        if ($value['movie_type'] == 'se') {
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                            $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
+                        } else {
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                            $urlvideo = str_replace('%', '%25', urldecode(base_url('/movie/' . $id . '/' . $url_name)));
+                        }
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
+
+                        if ($value['movie_quality'] == "HD") {
+                            $display = "red";
+                        } else if ($value['movie_quality'] == "FullHD") {
+                            $display = "red";
+                        } else if ($value['movie_quality'] == "Zoom" || $value['movie_quality'] == "ZM") {
+                            $display = "green";
+                        } else if ($value['movie_quality'] == "4K") {
+                            $display = "#e6be62";
+                        } else {
+                            $display = "green";
+                        }
+
+
+
+                    ?>
+
+                        <a href="<?php echo $urlvideo; ?>" class="card-content" style="background-image: url(<?php echo $value['movie_picture']; ?>)">
+                            <div class="card-quality">
+                                <div class="card-quality-style" style=" background-color: <?php echo $display; ?>;">
+                                    <?php echo strtoupper($value['movie_quality']); ?>
+                                </div>
+                                <div class="card-quality-style color-hd">
+                                    <i class="fas fa-eye"></i>
+                                    <?php
+                                    if (empty($value['movie_view'])) {
+                                        echo "0";
+                                    } else {
+                                        echo $value['movie_view'];
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="card-description">
+                                <div class="card-description-content">
+                                    <div class="card-description-nema"><?php echo $value['movie_sound'] . ' ' . $value['movie_quality'] . ' ' . $value['movie_year']; ?></div>
+                                    <div class="card-description-down"><?php echo $value['movie_thname']; ?></div>
+                                </div>
+
+                            </div>
+                            <div class="card-quality-style color-star">
+                                <?php echo $value['movie_ratescore']; ?>/10 <i class="fas fa-star"></i>
+                            </div>
+                        </a>
+                    <?php } ?>
+
+
+                </div>
+                <div>
                 </div>
 
             </div>
-            <div>
-            </div>
-
-        </div>
-        <div class="content-pa">
-            <div class="pagination">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </div>
-        <div class="content">
-            <div class="content-title">
-                <div class="title vl">ดูซีรีย์</div>
-                <div class="title-right">เพิ่มเติม</div>
-            </div>
-            <div class="content-grid">
-                <div class="content-list">
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
+            <div class="content-main">
+                <div class="box">
+                    <div class="navigation">
+                        <ul>
+                            <div class="topbar-filter">
+                                <div class="pagination2">
+                                    <?= pagination($paginate['page'], $paginate['total_page']); ?>
+                                </div>
                             </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
-            <div>
-            </div>
+            <?php foreach ($video_interest as $value) {  ?>
+                <div class="content">
+                    <div class="content-title">
+                        <div class="title vl"><?php echo $value['category_name']; ?></div>
+                        <a class="title-right" href="<?php echo "/category/" . $value['category_id'] . "/" . urlencode($value['category_name']); ?>">เพิ่มเติม</a>
+                    </div>
+                    <div class="content-grid">
+                        <div class="content-list">
+                            <?php
+                            $movie = explode('|', $value['movie']);
 
-        </div>
+                            $check = '1';
+                            foreach ($movie as $val) {
 
-        <div class="content">
-            <div class="content-title">
-                <div class="title vl">หนังการ์ตูน</div>
-                <div class="title-right">เพิ่มเติม</div>
-            </div>
-            <div class="content-grid">
-                <div class="content-list">
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                                list($movie_id, $movie_thname, $score, $movie_view, $movie_type, $movie_quality, $movie_picture) = explode('{-}', $val);
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
+                                if ($check <= '5') {
 
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $movie_thname)))))));
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                                    if ($movie_type == 'se') {
+                                        $urlvideo = urldecode(base_url('/series/' . $movie_id . '/' . $url_name));
+                                    } else {
+                                        $urlvideo = urldecode(base_url('/movie/' . $movie_id . '/' . $url_name));
+                                    }
 
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
+                            ?>
+                                    <a href="<?php echo $urlvideo; ?>" class="card-content" style="background-image: url(<?php echo $movie_picture; ?>)">
 
+                                        <div class="card-quality">
+                                            <div class="card-quality-style" style=" background-color: <?php echo $display; ?>;">
+                                                <?php echo strtoupper($movie_quality); ?>
+                                            </div>
+                                            <div class="card-quality-style color-hd">
+                                                <i class="fas fa-eye"></i>
+                                                <?php
+                                                if (empty($movie_view)) {
+                                                    echo "0";
+                                                } else {
+                                                    echo $movie_view;
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <div class="card-description">
+                                            <div class="card-description-content">
+                                               
+                                                <div class="card-description-down"><?php echo $movie_thname; ?></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-quality-style color-star">
+                                            <?php echo $score; ?>/10 <i class="fas fa-star"></i>
+                                        </div>
+                                    </a>
+                            <?php
+                                }
+                                $check++;
+                            }
+                            ?>
                         </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
+
+                    </div>
+                    <div>
+                    </div>
+
                 </div>
+            <?php
+            }
+            ?>
 
-            </div>
-            <div>
-            </div>
 
-        </div>
-
-        <div class="content">
-            <div class="content-title">
-                <div class="title vl">หนังฝรั่ง</div>
-                <div class="title-right">เพิ่มเติม</div>
-            </div>
-            <div class="content-grid">
-                <div class="content-list">
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-            <div>
-            </div>
-
-        </div>
-        <div class="content">
-            <div class="content-title">
-                <div class="title vl">NETFLIX</div>
-                <div class="title-right">เพิ่มเติม</div>
-            </div>
-            <div class="content-grid">
-                <div class="content-list">
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="card-content" style="background-image: url('https://dummyimage.com/310x440/ffffff')">
-                        <div class="card-quality">
-                            <div class="card-quality-style">
-                                HD
-                            </div>
-                            <div class="card-quality-style color-hd">
-                                <i class="fas fa-eye"></i> 123
-                            </div>
-                        </div>
-                        <div class="card-description">
-                            <div class="card-description-content">
-                                <div class="card-description-nema">JUJUTSU KAISEN</div>
-                                <div class="card-description-down">JUJUTSU KAISEN</div>
-                            </div>
-
-                        </div>
-                        <div class="card-quality-style color-star">
-                            6.5/10 <i class="fas fa-star"></i>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-            <div>
-            </div>
-
-        </div>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 'auto',
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    1700: {
-                        slidesPerView: 8,
+            <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 'auto',
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
                     },
-                }
-            });
-        </script>
+                    breakpoints: {
+                        1700: {
+                            slidesPerView: 8,
+                        },
+                    }
+                });
+            </script>
 
 </body>
 

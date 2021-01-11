@@ -1,0 +1,94 @@
+CRITICAL - 2021-01-11 00:00:03 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:02:55 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:03:14 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:03:52 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:04:45 --> Illegal string offset 'movie_picture'
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:05:50 --> Illegal string offset 'movie_sound'
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 152, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:06:11 --> Undefined variable: The Invisible Man มนุษย์ล่องหน
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 153, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 00:43:00 --> syntax error, unexpected '.'
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/lis...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(228): view('templatesv2/lis...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 00:43:00 --> syntax error, unexpected '.'
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/lis...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(228): view('templatesv2/lis...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', 'css', 'app.css')
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 00:43:01 --> syntax error, unexpected '.'
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/lis...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(228): view('templatesv2/lis...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', 'favicon.png')
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
