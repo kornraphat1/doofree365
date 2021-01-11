@@ -1,5 +1,4 @@
 
-<div id="homepage">
 
     <div class="container" id="play">
         <div class="content">
