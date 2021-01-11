@@ -53,9 +53,14 @@ $routes->get('/series/(:num)/(:any)', 'Home::get_ep_series/$1/$2');
 $routes->get('/category/series', 'Home::list_series');
 
 //เพิ่มจำนวนคนดู
-$routes->get('/movie_view_add/movie_id/(:num)/branch/(:num)', 'Home::save_movie_view/$1/$2');
+$routes->get('/movie_view_add/(:num)/', 'Home::countView/$1');
+
+$routes->post('save_requests', 'Home::save_requests');
+$routes->post('con_ads', 'Home::con_ads');
+$routes->post('saveReport', 'Home::saveReport');
 
 
+$routes->get('contract', 'Home::contract');
 //365
 $routes->get('/body', 'Home::body');
 $routes->get('/list', 'Home::list');

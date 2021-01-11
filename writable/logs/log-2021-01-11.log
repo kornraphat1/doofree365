@@ -92,3 +92,100 @@ CRITICAL - 2021-01-11 00:43:01 --> syntax error, unexpected '.'
 #4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2021-01-11 01:41:29 --> Undefined variable: val
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\header.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 78, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/hea...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(78): view('templatesv2/hea...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 01:42:09 --> Undefined variable: val
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\header.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 78, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/hea...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(78): view('templatesv2/hea...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 01:54:29 --> Undefined variable: val
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\header.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 78, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/hea...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(78): view('templatesv2/hea...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 02:01:49 --> Undefined property: App\Controllers\Home::$path_setting
+#0 C:\xampp\htdocs\doofree\app\Controllers\Home.php(774): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 774, Array)
+#1 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->contract()
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:02:46 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\doofree\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\doofree\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\doofree\app\Controllers\Home.php(775): CodeIgniter\Model->__call('get_ads', Array)
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->contract()
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 02:03:05 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\doofree\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\doofree\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\doofree\app\Controllers\Home.php(775): CodeIgniter\Model->__call('get_ads', Array)
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->contract()
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 02:03:24 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\doofree\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\doofree\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\doofree\app\Controllers\Home.php(775): CodeIgniter\Model->__call('get_ads', Array)
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->contract()
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 02:35:14 --> Undefined variable: document_root
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\header.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 27, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/hea...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(788): view('templatesv2/hea...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->contract()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 02:58:19 --> Cannot redeclare App\Models\Video_Model::save_reports()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 03:03:49 --> Undefined variable: val
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 03:08:40 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\doofree\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\doofree\system\Model.php(1648): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\doofree\app\Models\Video_Model.php(713): CodeIgniter\Model->__get('mo_adscontact')
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(539): App\Models\Video_Model->con_ads(1, 'd\xE0\xB8\xA3\xE0\xB8\xA0\xE0\xB8\xB1\xE0\xB8\x97\xE0\xB8...', 'Kornraphat1@gma...', 'as', '0823655565')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->con_ads()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

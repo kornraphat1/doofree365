@@ -48,7 +48,7 @@
                                 $display = "green";
                             }
                     ?>
-                            <a href="<?php echo $urlvideo; ?>" class="card-content" style="background-image: url('<?php echo $value['movie_picture']; ?>')"alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                            <a href="<?php echo $urlvideo; ?>"  class="card-content" style="background-image: url('<?php echo $value['movie_picture']; ?>')"alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
                                 <div class="card-quality">
                                     <div class="card-quality-style" style=" background-color: <?php echo $display; ?>;">
                                         <?php echo strtoupper($value['movie_quality']); ?>
