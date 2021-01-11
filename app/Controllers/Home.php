@@ -124,16 +124,17 @@ class Home extends BaseController
 			'ads'  => $ads,
 			'new_movie_recom' => $list_movie_recommend['list'],
 			'listyear' => $listyear,
-			'video_interest' => $video_interest
+			'video_interest' => $video_interest,
+			'title' => 'หนังใหม่'
 		];
 		// echo "<pre>";
 		// print_r($category_id);die;
 
 
 
-		echo view('templates/header.php', $headdata);
-		echo view('templates/newmovie.php', $data);
-		echo view('templates/footer.php');
+		echo view('templatesv2/header.php', $headdata);
+		echo view('templatesv2/list.php', $data);
+		echo view('templatesv2/footer.php');
 	}
 	public function zoom()
 	{
@@ -224,9 +225,9 @@ class Home extends BaseController
 			'title' => $title
 		];
 
-		echo view('templates/header', $headdata);
-		echo view('templates/search', $list_data_video);
-		echo view('templates/footer');
+		echo view('templatesv2/header', $headdata);
+		echo view('templatesv2/list', $list_data_video);
+		echo view('templatesv2/footer');
 	}
 
 
@@ -526,7 +527,7 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 		$keyword_string = urldecode($keyword_string);
-		$title = $keyword_string;
+		$title = 'คุณกำลังค้นหา : ' . $keyword_string;
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$listyear = $this->VideoModel->get_listyear($this->branch);
 		$list_video = $this->VideoModel->get_list_video_search($keyword_string, $this->branch_id, $page);
@@ -564,10 +565,10 @@ class Home extends BaseController
 		];
 
 
-		echo view('templates/header', $headdata);
+		echo view('templatesv2/header', $headdata);
 
-		echo view('templates/search', $list_data_video);
-		echo view('templates/footer');
+		echo view('templatesv2/list', $list_data_video);
+		echo view('templatesv2/footer');
 	}
 
 	// แจ้งหนังเสีย
@@ -581,20 +582,45 @@ class Home extends BaseController
 			echo "Error";
 		}
 	}
-
-	// ขอหนัง
-	public function save_request($branch, $movie)
+	public function countView($id)
 	{
-
-		$movie = urldecode($movie);
-		$result = $this->VideoModel->save_requests($branch, $movie);
-		if ($result == true && is_bool($result)) {
-			echo "OK";
-		} else {
-			echo "Error";
-		}
+		$this->VideoModel->countView($id);
 	}
 
+	// ขอหนัง
+
+
+	public function save_requests()
+	{
+		$request_text = $_POST['request_text'];
+// echo '<pre>',print_r($request_text,true),'</pre>';die;
+		$this->VideoModel->save_requests($this->branch, $request_text);
+	}
+
+	public function con_ads()
+	{
+		$ads_con_name = $_POST['ads_con_name'];
+		$ads_con_email = $_POST['ads_con_email'];
+		$ads_con_line = $_POST['ads_con_line'];
+		$ads_con_tel = $_POST['ads_con_tel'];
+
+		// print_r($_POST);
+		// die;
+		$this->VideoModel->con_ads($this->branch, $ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel);
+	}
+	public function saveReport()
+	{
+
+
+		$movie_id =  $_POST['movie_id'];
+		$movie_name = $_POST['movie_name'];
+		$movie_ep_name = $_POST['movie_ep_name'];
+		$datetime = date('Y-m-d H:i:s');
+
+
+
+		$result = $this->VideoModel->save_reports($this->branch, $movie_id, $movie_name, $movie_ep_name, $datetime);
+	}
 
 	public function list_series()
 	{
@@ -642,49 +668,34 @@ class Home extends BaseController
 		echo view('templates/search', $list_data_video);
 		echo view('templates/footer');
 	}
+
+	public function contract() //ต้นแบบ หน้า cate / search
+	{
+		$setting = $this->VideoModel->get_setting($this->branch);
+		// $setting['setting_img'] = $this->path_setting . $setting['setting_logo'];
+		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$header_data = [
+			'backURL' => $this->backURL,
+			// 'document_root' => $this->document_root,
+			// 'path_thumbnail' => $this->path_thumbnail,
+			// 'path_setting' => $this->path_setting,
+			'setting' => $setting,
+
+
+			'ads' => $ads,
+			'path_ads' => $this->path_ads,
+		];
+
+		echo view('templatesv2/header.php', $header_data);
+		echo view('templatesv2/contract.php');
+		echo view('templatesv2/footer.php');
+	}
+
+
 	// Add movie view
 	public function save_movie_view($movie_id, $branch)
 	{
 		$this->VideoModel->movie_view($movie_id, $branch);
 	}
-
-	public function body()
-	{
-		// $a = $this->VideoModel->getdata('hhikihggt');
-		// print_r ($a) ;
-		echo view('/templatesv2/header.php');
-		echo view('/templatesv2/body');
-		echo view('/templatesv2/footer.php');
-	}
-	public function list()
-	{
-		echo view('/templatesv2/header.php');
-		echo view('/templatesv2/list');
-		echo view('/templatesv2/footer.php');
-	}
-	public function play()
-	{
-		$id = 73;
-		$a = $this->VideoModel->getdata($id);
-		// print_r($a);
-		$data = [
-			'a' => $a,
-
-		];
-		echo view('/templatesv2/header.php');
-		echo view('/templatesv2/play', $data);
-		echo view('/templatesv2/footer.php');
-	}
-	public function dcontract()
-	{
-		echo view('/templatesv2/header.php');
-		echo view('/templatesv2/dcontract');
-		echo view('/templatesv2/footer.php');
-	}
-	public function cate()
-	{
-		echo view('/templatesv2/header.php');
-		echo view('/templatesv2/cate');
-		echo view('/templatesv2/footer.php');
-	}
+	
 }

@@ -113,8 +113,17 @@
                     </div>
                 </div>
                 <div class="content-video-display">
+<<<<<<< HEAD
                     <div class="color-play"> <?=$sound?>
                     </div>
+=======
+                    <a class="color-play"> พากย์ไทย
+                    </a>
+                    <a class="color-play"> ซับไทย
+                    </a>
+                    <a class="color-play"> SOUNDTRACK
+                    </a>
+>>>>>>> fc2fb7938a63b5739ace0fc581a0c0fe4bf3e83c
                     <div></div>
                     <div></div>
                     <div>

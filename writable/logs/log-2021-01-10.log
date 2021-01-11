@@ -1,0 +1,52 @@
+CRITICAL - 2021-01-10 23:52:42 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-10 23:53:02 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-10 23:53:06 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-10 23:53:23 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#1 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-10 23:59:30 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-10 23:59:44 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(79): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
