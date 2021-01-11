@@ -169,10 +169,10 @@
 
                             ?>
 
-                            <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
+                                <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;" class="but-before">ตอนก่อนหน้า</button></a>
 
 
-                            <select onchange="click_ep(this)">
+                                <select class="but-op" onchange="click_ep(this)">
 
                                 <?php
 
@@ -209,7 +209,11 @@
 
                             ?>
 
+<<<<<<< HEAD
                             <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?>>ตอนถัดไป</button></a>
+=======
+                                <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; "<?= $disabled ?> class="but-before">ตอนถัดไป</button></a>
+>>>>>>> f4d4572b0366928022aaf0714a3a0c44db08743b
 
 
                         </div>
