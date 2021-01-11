@@ -1,21 +1,8 @@
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<body id="homepage">
+<div id="homepage">
 
     <div class="container" id="play">
-
-
         <div class="content">
-            <div class="content-video">
-                <div class="AD-style">
-                    โฆษณา
-                </div>
-            </div>
-
-
             
             <div class="content-title-play">
                 <div class="title vl"><?php echo $video_data['movie_thname']; ?></div>
@@ -113,17 +100,8 @@
                     </div>
                 </div>
                 <div class="content-video-display">
-<<<<<<< HEAD
                     <div class="color-play"> <?=$sound?>
                     </div>
-=======
-                    <a class="color-play"> พากย์ไทย
-                    </a>
-                    <a class="color-play"> ซับไทย
-                    </a>
-                    <a class="color-play"> SOUNDTRACK
-                    </a>
->>>>>>> fc2fb7938a63b5739ace0fc581a0c0fe4bf3e83c
                     <div></div>
                     <div></div>
                     <div>
@@ -232,16 +210,3 @@
     });
   }
 </script>
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-
-        </script>
-
-</body>
-
-</html>
