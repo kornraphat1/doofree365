@@ -788,15 +788,15 @@ class Home extends BaseController
 	}
 	public function play()
 	{
-		$id = 73;
-		$a = $this->VideoModel->getdata($id);
-		// print_r($a);
-		$data = [
-			'a' => $a,
+		// $id = 73;
+		// $a = $this->VideoModel->getdata($id);
+		// // print_r($a);
+		// $data = [
+		// 	'a' => $a,
 
-		];
+		// ];
 		echo view('/templatesv2/header.php');
-		echo view('/templatesv2/play', $data);
+		echo view('/templatesv2/play', );
 		echo view('/templatesv2/footer.php');
 	}
 	public function dcontract()
