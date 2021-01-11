@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="content-video-display">
-                    <a href="<?=base_url('movie/'.$video_data['movie_ids'].'/'.$url_name)?>" class="color-play"> <i class="fas fa-play"></i> ตัวเล่นหลัก
+                    <a href="<?=base_url('movie/'.$video_data['movie_id'].'/'.$url_name)?>" class="color-play"> <i class="fas fa-play"></i> ตัวเล่นหลัก
                     </a>
                     <div></div>
                     <div></div>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="content-video-display">
-                    <div class="color-play"> <?=$sound?>
+                    <div class="color-play"> <?php echo ( !empty($sound) ? $sound : "-");?>
                     </div>
                     <div></div>
                     <div></div>

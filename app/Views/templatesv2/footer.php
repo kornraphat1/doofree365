@@ -64,7 +64,7 @@
     }
 
     function countView(id) {
-        alert(id);
+        // alert(id);
         var base_url = '<?= base_url() ?>';
         $.ajax({
 

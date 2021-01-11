@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="content-video-display">
-                    <div class="color-play"> <?=$sound?>
+                    <div class="color-play">  <?php echo ( !empty($sound) ? $sound : "-");?>
                     </div>
                     <div></div>
                     <div></div>
