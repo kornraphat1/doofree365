@@ -561,7 +561,7 @@
 
    header .menu-bar {
        background-color: #2c2e35;
-       height: 13%;
+       height: 16%;
 
        margin-bottom: 0px;
        width: 100%;
@@ -608,7 +608,7 @@
        }
 
        header .menu-bar {
-           height: 10%
+           height: 15%
        }
 
        header .menu-bar ul li {
@@ -774,6 +774,7 @@
    }
 
    #play .content-fail-style {
+       font-family: 'Kanit', sans-serif;
        font-size: 25px;
        color: white;
        background-color: #38b14a;
@@ -841,7 +842,7 @@
        }
 
        #play .content-fail-style {
-           font-size: 15px;
+           font-size: 10px;
            padding: 5px 10px 5px 10px;
 
        }

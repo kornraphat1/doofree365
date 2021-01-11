@@ -58,10 +58,10 @@
                 </div>
 
                 <div class="content-video-display">
-                    <div class="color-play"> <i class="fas fa-play"></i> ตัวเล่นหลัก
-                    </div>
-                    <div class="color-play"> <i class="fas fa-play"></i> ตัวเล่นสำรอง
-                    </div>
+                    <a class="color-play"> <i class="fas fa-play"></i> ตัวเล่นหลัก
+                    </a>
+                    <a class="color-play"> <i class="fas fa-play"></i> ตัวเล่นสำรอง
+                    </a>
                     <div></div>
                     <div></div>
                     <button class="content-fail-style">แจ้งเสีย</button>
@@ -70,12 +70,12 @@
                     </div>
                 </div>
                 <div class="content-video-display">
-                    <div class="color-play"> พากย์ไทย
-                    </div>
-                    <div class="color-play"> ซับไทย
-                    </div>
-                    <div class="color-play"> SOUNDTRACK
-                    </div>
+                    <a class="color-play"> พากย์ไทย
+                    </a>
+                    <a class="color-play"> ซับไทย
+                    </a>
+                    <a class="color-play"> SOUNDTRACK
+                    </a>
                     <div></div>
                     <div></div>
                     <div> หนังแอคชั่น,ผจญภัย,2020,ดราม่า
