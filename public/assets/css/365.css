@@ -1030,13 +1030,24 @@
        transform: scale(1.1);
    }
 
-   a {
+   #play a {
        color: white;
        text-decoration: none;
        background-color: transparent;
    }
 
-   a:hover {
+   #play a:hover {
        color: #39b24b;
        text-decoration: none;
+   }
+   #play .but-before{
+    
+    background-color: #38b14a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+   }
+   #play .but-op{
+    padding: 10px;
    }
