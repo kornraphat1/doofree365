@@ -307,113 +307,183 @@ class Home extends BaseController
 
 
 
-	public function video($id)
+	public function video($id, $name)
 	{
-		// print_r($_GET);die;
 		$keyword_string = "";
-
-		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
-
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-		$feildplay = "";
-		$video_data = $this->VideoModel->get_id_video($id);
-		$category_id = $this->VideoModel->get_category($this->branch);
-
-		$path_livesteram = $this->VideoModel->get_path_livesteram();
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$setting = $this->VideoModel->get_setting($this->branch);
-		$listcontent = $this->VideoModel->get_listcontent($this->branch);
+		$video_data = $this->VideoModel->get_id_video($id);
+		$videocate = $this->VideoModel->get_category_movie($id);
+
+		if (substr($video_data['movie_picture'], 0, 4) == 'http') {
+			$movie_picture = $video_data['movie_picture'];
+		} else {
+			$movie_picture = $this->path_thumbnail . $video_data['movie_picture'];
+		}
+		$setting['setting_img'] = $movie_picture;
 
 		$seo = $this->VideoModel->get_seo($this->branch);
-		$name_video = $this->VideoModel->get_namevideo($id);
-		$get_title = $this->VideoModel->get_title($this->branch);
-		$get_img_og = $this->VideoModel->get_img_og($id);
-		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-
-		$name_videos = $name_video['movie_thname'];
-		$title_name = $get_title['setting_title'];
-		$title = $seo['seo_title'];
-		$description = $seo['seo_description'];
-		$description_movie = $name_video['movie_des'];
-		$discription_web = str_replace("{movie_description}", $description_movie, $description);
-		$title_web = str_replace("{movie_title} - {title_web}", $name_videos . " - " . $title_name, $title);
-
-		// if ($video_data['movie_sound'] == "thai" || $video_data['movie_sound'] == "") {
-
-		// 	if ($typeplay == "main") {
-		// 		$feildplay = 'movie_thmain';
-		// 	} else if ($typeplay == "sub1") {
-		// 		$feildplay = 'movie_thsub1';
-		// 	} else if ($typeplay == "sub2") {
-		// 		$feildplay = 'movie_thsub2';
-		// 	}
-		// } else {
-
-		// 	if ($typeplay == "main") {
-		// 		$feildplay = 'movie_enmain';
-		// 	} else if ($typeplay == "sub1") {
-		// 		$feildplay = 'movie_ensub1';
-		// 	} else if ($typeplay == "sub2") {
-		// 		$feildplay = 'movie_ensub2';
-		// 	}
-		// }
-
-		if (!empty($video_data['movie_thmain'])) {
-			$feildplay = 'movie_thmain';
-		} else if (!empty($video_data['movie_thsub1'])) {
-			$feildplay = 'movie_thsub1';
-		} else if (!empty($video_data['movie_thsub2'])) {
-			$feildplay = 'movie_thsub2';
-		} else if (!empty($video_data['movie_enmain'])) {
-			$feildplay = 'movie_enmain';
-		} else if (!empty($video_data['movie_ensub1'])) {
-			$feildplay = 'movie_ensub1';
-		} else if (!empty($video_data['movie_ensub2'])) {
-			$feildplay = 'movie_ensub2';
+		if(!empty($seo)){
+			if(!empty($seo['seo_title'])){
+				$title = $seo['seo_title'];
+				$name_videos = $video_data['movie_thname'];
+				$title_name = $setting['setting_title'];
+				$title_web = str_replace(
+								"{movie_title} - {title_web}", 
+								$name_videos . " - " . $title_name, 
+								$title
+							);
+				$setting['setting_title'] = $title_web;
+			}
+			
+			if(!empty($seo['seo_description'])){
+				$description = $seo['seo_description'];
+				$description_movie = $video_data['movie_des'];
+				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
+			}
+			
 		}
-		// print_r($video_data);
-		// echo $feildplay;die;
 
-		$headdata = [
+		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
+		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
+
+		$header_data = [
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
-			'keyword_string' => $keyword_string,
-			'category_id' => $category_id,
-			'path_imgads' => $path_imgads,
-			'path_livesteram' => $path_livesteram,
-			'listcontent' =>  $listcontent,
-			'title_web' => $title_web,
-			'title' => $title,
-			'description' => $description,
-			'description_movie' => $description_movie,
-			'discription_web' => $discription_web,
-			'get_img_og' => $get_img_og,
-			'setting' => $setting,
 			'path_ads' => $this->path_ads,
 			'path_logo' => $this->path_logo,
-		];
-
-		$data = [
+			'path_imgads' => $path_imgads,
+			'keyword_string' => $keyword_string,
+			'setting' => $setting,
 			'index' => 'a',
-			'listyear' => $listyear,
 			'vdorandom' => $vdorandom,
 			'video_data' => $video_data,
-			'feildplay' => $feildplay,
-			'list_video' => $list_video['list'],
-			'name_videos' => $name_videos,
-			'title_name' => $title_name,
+			'videocate' => $videocate
 		];
 
-		// $this->VideoModel->movie_view($id);
+		echo view('templatesv2/header.php', $header_data);
+		echo view('templatesv2/play.php');
+		echo view('templatesv2/footer.php');
+	}
+
+	public function get_ep_series($id)
+	{
+
+		$keyword_string = "";
+		$setting = $this->VideoModel->get_setting($this->branch);
+		$series = $this->VideoModel->get_ep_series($id);
+		$videocate = $this->VideoModel->get_category_movie($id);
+
+		if (substr($series['movie_picture'], 0, 4) == 'http') {
+			$movie_picture = $series['movie_picture'];
+		} else {
+			$movie_picture = $this->path_thumbnail . $series['movie_picture'];
+		}
+		$setting['setting_img'] = $movie_picture;
+
+		$seo = $this->VideoModel->get_seo($this->branch);
+		if(!empty($seo)){
+			if(!empty($seo['seo_title'])){
+				$title = $seo['seo_title'];
+				$name_videos = $series['movie_thname'];
+				$title_name = $setting['setting_title'];
+				$title_web = str_replace(
+								"{movie_title} - {title_web}", 
+								$name_videos . " - " . $title_name, 
+								$title
+							);
+				$setting['setting_title'] = $title_web;
+			}
+			
+			if(!empty($seo['seo_description'])){
+				$description = $seo['seo_description'];
+				$description_movie = $series['movie_des'];
+				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
+			}
+			
+		}
+
+		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
+		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
+
+		$header_data = [
+			'backURL' => $this->backURL,
+			'branch' => $this->branch,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
+			'path_imgads' => $path_imgads,
+			'keyword_string' => $keyword_string,
+			'setting' => $setting,
+			'vdorandom' => $vdorandom,
+			'video_data' => $series,
+			'videocate' => $videocate
+		];
+
+		// echo "<pre>";
+		// print_r($series);
+		// die;
 
 
-		echo view('templates/header-video.php', $headdata);
-		echo view('templates/video.php', $data);
-		echo view('templates/footer.php');
+		echo view('templatesv2/header.php', $header_data);
+		echo view('templatesv2/series.php');
+		echo view('templatesv2/footer.php');
+	}
+
+	public function video_series($series_id, $series_name, $ep_id, $ep_name)
+	{
+		$keyword_string = "";
+		$setting = $this->VideoModel->get_setting($this->branch);
+		$series = $this->VideoModel->get_ep_series($series_id);
+		$videocate = $this->VideoModel->get_category_movie($series_id);
+
+		if (substr($series['movie_picture'], 0, 4) == 'http') {
+			$movie_picture = $series['movie_picture'];
+		} else {
+			$movie_picture = $this->path_thumbnail . $series['movie_picture'];
+		}
+		$setting['setting_img'] = $movie_picture;
+
+		$seo = $this->VideoModel->get_seo($this->branch);
+		if(!empty($seo)){
+			if(!empty($seo['seo_title'])){
+				$title = $seo['seo_title'];
+				$name_videos = $series['movie_thname'];
+				$title_name = $setting['setting_title'];
+				$title_web = str_replace(
+								"{movie_title} - {title_web}", 
+								$name_videos . " - " . $title_name, 
+								$title
+							);
+				$setting['setting_title'] = $title_web;
+			}
+			
+			if(!empty($seo['seo_description'])){
+				$description = $seo['seo_description'];
+				$description_movie = $series['movie_des'];
+				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
+			}
+			
+		}
+
+		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
+		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
+
+		$header_data = [
+			'backURL' => $this->backURL,
+			'branch' => $this->branch,
+			'path_ads' => $this->path_ads,
+			'path_logo' => $this->path_logo,
+			'path_imgads' => $path_imgads,
+			'keyword_string' => $keyword_string,
+			'setting' => $setting,
+			'vdorandom' => $vdorandom,
+			'video_data' => $series,
+			'videocate' => $videocate,
+			'index' => $ep_id
+		];
+
+		echo view('templatesv2/header.php', $header_data);
+		echo view('templatesv2/play.php');
+		echo view('templatesv2/footer.php');
 	}
 
 
@@ -435,7 +505,7 @@ class Home extends BaseController
 
 		$data = [
 			'video_data' => $video_data,
-			'url_play'	=> $urlplay,
+			'playerUrl'	=> $urlplay,
 			'adsvideo'		=> $adsvideo_data,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch
@@ -525,200 +595,6 @@ class Home extends BaseController
 		}
 	}
 
-
-
-	public function get_ep_series($id)
-	{
-
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-		$series = $this->VideoModel->get_ep_series($id);
-
-
-
-		$ads = $this->VideoModel->get_path_imgads($this->branch);
-		$listcontent = $this->VideoModel->get_listcontent($this->branch);
-		$keyword_string = "";
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
-		$path_livesteram = $this->VideoModel->get_path_livesteram();
-		$setting = $this->VideoModel->get_setting($this->branch);
-		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
-		$setting['img_og'] = $setting['setting_logo'];
-
-
-		$seo = $this->VideoModel->get_seo($this->branch);
-
-		$name_video = $this->VideoModel->get_namevideo($id);
-
-		$get_title = $this->VideoModel->get_title($this->branch);
-
-		$get_img_og = $this->VideoModel->get_img_og($id);
-
-		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
-
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-
-		$feildplay = "";
-
-		$name_videos = $name_video['movie_thname'];
-
-		$title_name = $get_title['setting_title'];
-
-		$title = $seo['seo_title'];
-
-		$description = $seo['seo_description'];
-
-		$description_movie = $name_video['movie_des'];
-
-		$discription_web = str_replace("{movie_description}", $description_movie, $description);
-
-		$title_web = str_replace("{movie_title} - {title_web}", $name_videos . " - " . $title_name, $title);
-
-
-
-
-		$header_data = [
-
-			'ads'  => $ads,
-			'path_logo'  => $this->path_logo,
-			'path_ads'  => $this->path_ads,
-			'branch' => $this->branch,
-			'backURL' => $this->backURL,
-			'listcontent' =>  $listcontent,
-			'keyword_string' => $keyword_string,
-			'path_imgads' => $path_imgads,
-			'path_livesteram' => $path_livesteram,
-			'setting' => $setting,
-			'listyear' => $listyear,
-			'feildplay' => $feildplay,
-			'list_video' => $list_video['list'],
-			'ads' => $path_imgads,
-			'name_videos' => $name_videos,
-			'title_name' => $title_name,
-			'title' => $title,
-			'description' => $description,
-			'description_movie' => $description_movie,
-			'discription_web' => $discription_web,
-			'title_web' => $title_web,
-			'get_img_og' => $get_img_og
-		];
-
-		$body_data = [
-
-			'video_data' => $series,
-			'category_id' => $category_id,
-			'img_backurl' => $this->img_backurl,
-
-		];
-		// echo '<pre>' . print_r($series, true) . '</pre>';
-		// die;
-
-
-		echo view('templates/header-video', $header_data);
-		echo view('templates/series', $body_data);
-		echo view('templates/footer');
-	}
-
-	public function video_series($series_id, $series_name, $ep_id, $ep_name)
-	{
-		// print_r($_GET);die;
-		$keyword_string = "";
-		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
-		$page = 1;
-
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-
-
-		$feildplay = "";
-		$video_data = $this->VideoModel->get_id_video($series_id);
-		$category_id = $this->VideoModel->get_category($this->branch);
-		// $this->VideoModel->movie_view($series_id);
-		$path_livesteram = $this->VideoModel->get_path_livesteram();
-		$ads = $this->VideoModel->get_path_imgads($this->branch);
-		$setting = $this->VideoModel->get_setting($this->branch);
-		$listcontent = $this->VideoModel->get_listcontent($this->branch);
-		$seo = $this->VideoModel->get_seo($this->branch);
-		$name_video = $this->VideoModel->get_namevideo($series_id);
-		$get_title = $this->VideoModel->get_title($this->branch);
-		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$series = $this->VideoModel->get_ep_series($series_id);
-		$name_videos = $name_video['movie_thname'];
-		$title_name = $get_title['setting_title'];
-		$title = $seo['seo_title'];
-		$description = $seo['seo_description'];
-		$description_movie = $name_video['movie_des'];
-		$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
-		$setting['setting_title'] = str_replace("{movie_title} - {title_web}", $name_videos . " - " . $title_name, $title);
-		$get_img_og = $this->VideoModel->get_img_og($series_id);
-		$setting['img_og'] = $get_img_og['movie_picture'];
-		$discription_web = str_replace("{movie_description}", $description_movie, $description);
-
-		$title_web = str_replace("{movie_title} - {title_web}", $name_videos . " - " . $title_name, $title);
-
-		// echo '<pre>' . print_r($title_web, true) . '</pre>';die;
-
-		if (!empty($video_data['movie_thmain'])) {
-			$feildplay = 'movie_thmain';
-		} else if (!empty($video_data['movie_thsub1'])) {
-			$feildplay = 'movie_thsub1';
-		} else if (!empty($video_data['movie_thsub2'])) {
-			$feildplay = 'movie_thsub2';
-		} else if (!empty($video_data['movie_enmain'])) {
-			$feildplay = 'movie_enmain';
-		} else if (!empty($video_data['movie_ensub1'])) {
-			$feildplay = 'movie_ensub1';
-		} else if (!empty($video_data['movie_ensub2'])) {
-			$feildplay = 'movie_ensub2';
-		}
-
-
-		$header_data = [
-			'ads'  => $ads,
-			'path_imgads'  => $ads,
-			'path_logo'  => $this->path_logo,
-			'path_ads'  => $this->path_ads,
-			'branch' => $this->branch,
-			'backURL' => $this->backURL,
-			'listcontent' =>  $listcontent,
-			'keyword_string' => $keyword_string,
-			'category_id' => $category_id,
-			'path_livesteram' => $path_livesteram,
-			'setting' => $setting,
-			'category_id' => $category_id,
-			'title_name' => $title_name,
-			'title' => $title,
-			'description' => $description,
-			'description_movie' => $description_movie,
-			'discription_web' => $discription_web,
-			'title_web' => $title_web,
-			'get_img_og' => $get_img_og
-		];
-
-
-
-		$body_data = [
-
-			'index' => $ep_id,
-			'listyear' => $listyear,
-			'vdorandom' => $vdorandom,
-			'video_data' => $series,
-			'feildplay' => $feildplay,
-			'list_video' => $list_video['list'],
-			'name_videos' => $name_videos,
-
-
-		];
-
-		echo view('templates/header-video.php', $header_data);
-		echo view('templates/video.php', $body_data);
-		echo view('templates/footer.php');
-	}
 
 	public function list_series()
 	{

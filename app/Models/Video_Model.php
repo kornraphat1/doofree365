@@ -52,6 +52,8 @@ class Video_Model extends Model
 
                     $this->table_vdoads.adsvideo_status,
 
+                    $this->table_vdoads.adsvideo_skip,
+
                     $this->table_vdoads.adsvideo_url as url,
 
                     $this->table_vdoads.branch_id,
@@ -253,7 +255,6 @@ class Video_Model extends Model
                 FROM
                     `$this->table_movie`
                 WHERE
-
                     `$this->table_movie`.movie_id = ? 
                     AND `$this->table_movie`.movie_active = '1'";
 
@@ -261,6 +262,24 @@ class Video_Model extends Model
 
         $query = $this->db->query($sql, [$id]);
         return $query->getRowArray();
+    }
+
+    public function get_category_movie($movie_id)
+    {
+
+        $sql = "SELECT
+                    mo_category.*
+                FROM
+                    mo_moviecate
+                INNER JOIN mo_movie ON mo_moviecate.movie_id = mo_movie.movie_id 
+                INNER JOIN mo_category ON mo_moviecate.category_id = mo_category.category_id 
+                WHERE 
+                    mo_moviecate.movie_id = '$movie_id' ";
+
+                    // echo $sql;die;
+
+        $query = $this->db->query($sql);
+        return $query->getResultArray();
     }
 
     // Get video_series

@@ -87,12 +87,23 @@
                         โฆษณา
                     </div>
                     <div class="player-style">
-                        <iframe id="player" class="movie-trailer" class="player" src="<?=base_url('player/'.$video_data['movie_id'].'/movie_thmain/'.$index)?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
+                        <?php
+                            if(!empty($video_data['name_ep'])){
+                                foreach ($video_data['name_ep'] as $key => $val) { 
+                                    $url_nameep = urlencode(str_replace(' ', '-', $video_data['name_ep'][$key]));
+                        ?>
+                                    <a class="ep-link" href="<?=base_url('series/'.$video_data['movie_id'].'/'.$url_name.'/'.$key.'/'.$url_nameep)?>" tabindex="-1">
+                                        <?= $video_data['movie_thname'] . '-' . $video_data['name_ep'][$key] ?>
+                                    </a>
+                        <?php
+                                }
+                            }
+                        ?>
                     </div>
                 </div>
 
                 <div class="content-video-display">
-                    <a href="<?=base_url('movie/'.$video_data['movie_id'].'/'.$url_name)?>" class="color-play"> <i class="fas fa-play"></i> ตัวเล่นหลัก
+                    <a href="<?=base_url('movie/'.$video_data['movie_ids'].'/'.$url_name)?>" class="color-play"> <i class="fas fa-play"></i> ตัวเล่นหลัก
                     </a>
                     <div></div>
                     <div></div>
@@ -195,37 +206,6 @@
 
             </div>
         </div>
-
-<script>
-  function get_Report() {
-    var movie_id = '<?= $video_data['movie_id'] ?>';
-    var movie_name = '<?= $video_data['movie_thname'] ?>';
-    var movie_ep_name = '';
-    <?php if($video_data['movie_type']=='se'){ ?>
-      movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
-    <?php } ?>
-
-    var report = prompt('แจ้งหนังเสืย');
-
-    $.ajax({
-      url: "<?= base_url('saveReport') ?>",
-      data: {
-        movie_id: movie_id,
-        movie_name: movie_name,
-        movie_ep_name: movie_ep_name,
-        report: report
-      },
-      type: 'POST',
-      async: false,
-      success: function(data) {
-        alert('แจ้งเรียบร้อยจะดำเนินการโดยเร็ว');
-      }
-    });
-  }
-</script>
-
-
-
 
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
