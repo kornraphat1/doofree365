@@ -122,6 +122,77 @@
                         ?>
                     </div>
                 </div>
+                <?php
+                    if ($video_data['movie_type'] == 'se') { 
+                ?>
+                    <div class="movie-series-content ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <?php
+                                if ($index > 0) {
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+                                    $key = $index - 1;
+                                    $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+                                    $disabled = '';
+                                } else {
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+                                    $key = $index;
+                                    $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+                                    $disabled = 'disabled';
+                                }
+
+                                ?>
+
+                                <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
+
+
+                                <select onchange="click_ep(this)">
+
+                                    <?php
+
+                                    foreach ($video_data['name_ep'] as $key => $value) {
+
+                                        $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
+
+                                        $select = "";
+                                        if ($value == $video_data['name_ep'][$index]) {
+
+                                            $select = 'selected';
+                                        }
+
+                                        // $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
+
+                                    ?>
+
+                                        <option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
+                                    <?php } ?>
+                                </select>
+
+                                <?php
+                                if (isset($video_data['name_ep'][$index+1])) {
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+                                    $key = $index + 1;
+                                    $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+                                    $disabled = '';
+                                } else {
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+                                    $key = $index;
+                                    $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+                                    $disabled = 'disabled';
+                                }
+
+                                ?>
+
+                                <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; "<?= $disabled ?> >ตอนถัดไป</button></a>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                <?php
+                    }
+                ?>
 
                 <div class="content">
                     <div class="content-title">
@@ -184,29 +255,35 @@
         </div>
 
 <script>
-  function get_Report() {
-    var movie_id = '<?= $video_data['movie_id'] ?>';
-    var movie_name = '<?= $video_data['movie_thname'] ?>';
-    var movie_ep_name = '';
-    <?php if($video_data['movie_type']=='se'){ ?>
-      movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
-    <?php } ?>
+    function click_ep(selectObject,EpName) {   
+        var value = selectObject.value;
+        var urlname = selectObject.text.replace(' ','-');
+		window.location.href = "<?= base_url() ?>/series/<?= $video_data['movie_id'] ?>/" + value + "/" + urlname;
 
-    var report = prompt('แจ้งหนังเสืย');
+	}
+    function get_Report() {
+        var movie_id = '<?= $video_data['movie_id'] ?>';
+        var movie_name = '<?= $video_data['movie_thname'] ?>';
+        var movie_ep_name = '';
+        <?php if($video_data['movie_type']=='se'){ ?>
+        movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
+        <?php } ?>
 
-    $.ajax({
-      url: "<?= base_url('saveReport') ?>",
-      data: {
-        movie_id: movie_id,
-        movie_name: movie_name,
-        movie_ep_name: movie_ep_name,
-        report: report
-      },
-      type: 'POST',
-      async: false,
-      success: function(data) {
-        alert('แจ้งเรียบร้อยจะดำเนินการโดยเร็ว');
-      }
-    });
-  }
+        var report = prompt('แจ้งหนังเสืย');
+
+        $.ajax({
+        url: "<?= base_url('saveReport') ?>",
+        data: {
+            movie_id: movie_id,
+            movie_name: movie_name,
+            movie_ep_name: movie_ep_name,
+            report: report
+        },
+        type: 'POST',
+        async: false,
+        success: function(data) {
+            alert('แจ้งเรียบร้อยจะดำเนินการโดยเร็ว');
+        }
+        });
+    }
 </script>
