@@ -847,7 +847,7 @@
 
    #play .movie-trailer {
        width: 100%;
-       height: 100%;
+       height: 350px;
        position: relative;
    }
 
@@ -862,6 +862,12 @@
    }
 
    @media screen and (min-device-width: 280px) and (max-device-width: 1024px) {
+
+    #play .movie-trailer {
+        width: 100%;
+        height: 150px;
+        position: relative;
+    }
 
        #play .movie-trailer-video {
            width: 100%;

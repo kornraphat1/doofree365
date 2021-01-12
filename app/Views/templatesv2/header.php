@@ -69,7 +69,7 @@
         </ul>
         <div class="search">
             <form id="formsearch" method="get" class="search-size">
-                <input class="search-text" type="text" id="search" name="search" placeholder="search">
+                <input class="search-text" type="text" id="search" name="search" placeholder="search" autocomplete="off">
                 
                 <button type="submit" class="but-src"><i class="fas fa-search"></i></button>
             </form>
