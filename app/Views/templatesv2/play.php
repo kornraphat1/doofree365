@@ -238,9 +238,18 @@
                                 } else {
                                     $movie_picture = $path_thumbnail . $val['movie_picture'];
                                 }
+                                $id = $val['movie_id'];
+                                if ($val['movie_type'] == 'se') {
+    
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $val['movie_thname'])))))));
+                                    $urlvideo = urldecode(base_url('/series/' . $id . '/' . $url_name));
+                                } else {
+                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $val['movie_thname'])))))));
+                                    $urlvideo = urldecode(base_url('/movie/' . $id . '/' . $url_name));
+                                }
                         ?>
 
-                                <a href="<?= base_url('movie/' . $val['movie_id'] . '/' . $url_name) ?>" class="card-content" style="background-image: url('<?= $movie_picture ?>')">
+                                <a href="<?= $$urlvideo ?>"onclick="countView('<?= $val['movie_id'] ?>')"  class="card-content" style="background-image: url('<?= $movie_picture ?>')">
                                     <div class="card-quality">
                                         <div class="card-quality-style">
                                             <?= $val['movie_quality']; ?>

@@ -54,7 +54,7 @@
 
                     ?>
 
-                        <a href="<?php echo $urlvideo; ?>" onclick="countView('<?= $value['movie_id'] ?>')" class="card-content" style="background-image: url(<?php echo $value['movie_picture']; ?>)">
+                        <a href="<?php echo $urlvideo; ?>" onclick="countView('<?= $value['movie_id'] ?>')" class="card-content" style="background-image: url('<?php echo $value['movie_picture']; ?>')">
                             <div class="card-quality">
                                 <div class="card-quality-style" style=" background-color: <?php echo $display; ?>;">
                                     <?php echo strtoupper($value['movie_quality']); ?>
@@ -130,7 +130,7 @@
                                     }
 
                             ?>
-                                    <a href="<?php echo $urlvideo; ?>" class="card-content" style="background-image: url(<?php echo $movie_picture; ?>)">
+                                    <a href="<?php echo $urlvideo; ?>"  onclick="countView('<?= $movie_id ?>')" class="card-content" style="background-image: url('<?php echo $movie_picture; ?>')">
 
                                         <div class="card-quality">
                                             <div class="card-quality-style" style=" background-color: <?php echo $display; ?>;">

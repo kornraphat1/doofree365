@@ -6,16 +6,25 @@
     <div class="container">
 
         <span>ดูหนังออนไลน์</span> Doofree365 ดูหนัง ดูหนังซีรี่ส์ ฟรี โหลดไวแบบไม่มีสะดุดภาพคมชัดระดับ HD FullHD 4k ครบทุกเรื่องทุกรสดูได้ทุกที่ทุกเวลาทั้งบนมือถือ แท็บเล็ต เครื่องคอมพิวเตอร์ ระบบปฏิบัติการ Android และ IOS ดูหนังออนไลน์ หนังไทย หนังฝรั่ง หนังเอเชีย หนังการ์ตูน Netflix Movie หนังบู๊ หนังตลก หนังอาชญากรรม หนังดราม่า สยองขวัญ หนังผจญภัย และยังมี หนังใหม่ ให้รับชมอีกมากมาย
-สามารถรับชมฟรีได้ทุกที่ทุกเวลาตลอด 24 ชั่วโมงที่ Doofree365.com
+        สามารถรับชมฟรีได้ทุกที่ทุกเวลาตลอด 24 ชั่วโมงที่ Doofree365.com
 </footer>
 <script>
-    jQuery("#formsearch").submit(function(event) {
-        // alert("Esad");
-        if (jQuery("#search").val()) {
-            var url = "<?= base_url('/search') ?>" + '/' + jQuery("#search").val();
-            window.location.href = url;
+    $(document).ready(function() {
+
+
+        $("#formsearch").submit(function(event) {
+            // alert("Esad");
+            if ($("#search").val()) {
+                var url = "<?= base_url('/search') ?>" + '/' + jQuery("#search").val();
+                window.location.href = url;
+
+            } else {
+
+                window.location.href = "<?= base_url(); ?>"
+
+            }
             event.preventDefault();
-        }
+        });
     });
 
     function openNav() {
