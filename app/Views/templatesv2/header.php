@@ -29,7 +29,8 @@
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1000; user-scalable=1.5;" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title><?php echo $setting['setting_title']; ?></title>
     <meta name="description" content="<?php echo $setting['setting_description']; ?>" />
     <meta name="keywords" content=" <?php echo $setting['setting_keyword']; ?>" />
