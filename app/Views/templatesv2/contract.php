@@ -182,7 +182,7 @@
         var ads_con_email = $.trim($("#ads_con_email").val());
         var ads_con_line = $.trim($("#ads_con_line").val());
         var ads_con_tel = $.trim($("#ads_con_tel").val());
-alert(request_text)
+// alert(request_text)
         if (form.checkValidity() === false) {
 
           event.preventDefault();

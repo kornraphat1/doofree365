@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="<?= base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css?v=1" rel="stylesheet">
+    <link href="<?= $document_root ?>/assets/vendor/bootstrap/css/bootstrap.min.css?v=1" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?= $document_root ?>/assets/css/365.css">
-    <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $document_root ?>/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?= $document_root ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <title><?php echo $setting['setting_title']; ?></title>
     <link rel="canonical" href="#" />
     <?php if (!empty($setting['setting_header'])) {
@@ -95,7 +95,7 @@
                     }
                 }
                 ?>
-                <img class="banners" src="https://backend.doomovie-5g.com/public/banners/1607339579_6518d13361e4d6c3d29b.png" alt="test" title="test">
+                <!-- <img class="banners" src="https://backend.doomovie-5g.com/public/banners/1607339579_6518d13361e4d6c3d29b.png" alt="test" title="test"> -->
             </div>
         </div>
     </div>

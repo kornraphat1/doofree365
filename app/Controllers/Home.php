@@ -520,6 +520,8 @@ class Home extends BaseController
 		}
 
 		$data = [
+			'document_root' => $this->document_root,
+
 			'video_data' => $video_data,
 			'playerUrl'	=> $urlplay,
 			'adsvideo'		=> $adsvideo_data,
