@@ -115,7 +115,7 @@
 
         </ul>
         <div class="search">
-            <form id="formsearch" style="padding-left: 30px; padding-right: 10px;">
+            <form id="formsearch" class="search-size">
                 <input class="search-text" type="text" id="search" name="search" placeholder="search">
                 <i class="fas fa-search"></i>
             </form>
