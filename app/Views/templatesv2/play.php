@@ -33,7 +33,7 @@
                             $urlyb = "https://www.youtube.com/embed/" . $yb[0];
                         }
                     ?>
-                    <div class="video-content"> <iframe class="movie-trailer " src="<?=$urlyb?>" frameborder="0" allowfullscreen=""></iframe>
+                    <div class="video-content"> <iframe class="movie-trailer" src="<?=$urlyb?>" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                 </div>
                 <div class="content-video">
@@ -73,7 +73,7 @@
                         โฆษณา
                     </div>
                     <div class="player-style">
-                        <iframe id="player" class="movie-trailer" class="player" src="<?=base_url('player/'.$video_data['movie_id'].'/movie_thmain/'.$index)?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
+                        <iframe id="player" class="movie-trailer-video" class="player" src="<?=base_url('player/'.$video_data['movie_id'].'/movie_thmain/'.$index)?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
                     </div>
                 </div>
 

@@ -99,12 +99,12 @@
    }
 
    body .content .content-grid .content-list .card-content .card-quality-style {
-       width: 69px;
-       background-color: black;
+       width: 60px;
+       background-color: red;
        color: white;
        text-align: center;
        border-radius: 0px;
-       margin: 2px 0px 0px -20px;
+       margin: 2px 0px 0px -25px;
 
    }
 
@@ -112,7 +112,7 @@
        background-color: red;
        width: max-content;
        padding: 0px 5px 0px 5px;
-       margin: 2px 0px 0px -20px;
+       margin: 2px 0px 0px -25px;
    }
 
    body .content .content-grid .content-list .card-content .color-star {
@@ -309,12 +309,12 @@
        }
 
        body .content .content-grid .content-list .card-content .card-quality-style {
-           width: 50px;
-           background-color: black;
+
            color: white;
            text-align: center;
            border-radius: 0px;
            font-size: 12px;
+           margin: 2px 0px 0px 0px;
 
        }
 
@@ -361,7 +361,7 @@
 
        body .content .content-grid .content-list .card-content {
            width: 48%;
-           height: 560px;
+           height: 220px;
            margin-right: 5px;
        }
 
@@ -584,13 +584,13 @@
        header .menu-bar .search {
            margin: 3% 3% 0% 0%;
            float: right;
-           height: 80px;
+           height: 10px;
            text-align: right;
            cursor: pointer;
        }
 
        header .menu-bar ul li a {
-           font-size: 13px;
+           font-size: 10px;
        }
 
        header .search-text {
@@ -705,7 +705,7 @@
        flex-direction: column;
        text-align: center;
        width: 100%;
-       height: 500px;
+       height: max-content;
        font-size: 27px;
        margin-top: 30px;
    }
@@ -793,7 +793,7 @@
 
 
    #play .video-content {
-       width: 100%;
+       width: 70%;
        background-color: black;
    }
 
@@ -802,20 +802,33 @@
        height: 100%;
    }
 
+   #play .movie-trailer-video {
+       width: 100%;
+       height: 500px;
+   }
+
    #play .img-vi {
-       width: 90%;
+       width: 250px;
+       height: 360px;
    }
 
    @media screen and (min-device-width: 280px) and (max-device-width: 1024px) {
 
+       #play .movie-trailer-video {
+           width: 100%;
+
+           height: max-content;
+       }
+
+
        #play .player-style {
            width: 100%;
-           height: 500px
-
+           height: max-content;
        }
 
        #play .content .content-grid .content-list .card-content {
            width: 48%;
+           height: 200px;
 
        }
 
@@ -867,15 +880,21 @@
            width: max-content;
        }
 
-       #play .img-vi {
-        width: 100%;
-       }
-
        #play .img-text {
            position: absolute;
            font-size: 30px;
            text-align: center;
            padding: 80px 0px 0px 30px;
+       }
+
+       #play .player-style {
+           font-size: 12px;
+
+       }
+
+       #play .img-vi {
+           width: 100px;
+           height: 160px;
        }
    }
 
