@@ -86,7 +86,7 @@
 
 
 
-            $html .= '<li class="'.$predisable.'"><a href="'.$link.'?page=1" >หน้าแรก</a></li>';
+            $html .= '<li class="'.$predisable.'"><a href="'.$link.'?page=1" ><<</a></li>';
 
             if(empty($predisable)){
 
@@ -142,7 +142,7 @@
 
 
 
-            $html .= '<li class="'.$nextdisable.'"><a href="'.$link.'?page='.$totals.'" >หน้าสุดท้าย</a></li>';
+            $html .= '<li class="'.$nextdisable.'"><a href="'.$link.'?page='.$totals.'" >>></a></li>';
 
         $html .= '</ul>';
 

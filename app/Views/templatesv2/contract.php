@@ -55,6 +55,7 @@
       background-color: white !important;
       width: 60% !important;
     }
+
     #movie-contract .tab-content {
     margin: 0 auto;
     margin-top: 20px;
@@ -65,6 +66,7 @@
 }
 
     @media only screen and (max-width: 600px) {
+
       .style-box {
         background-color: white !important;
         width: 80% !important;
@@ -115,23 +117,23 @@
             <form class="movie-formcontract" novalidate method="POST" action="">
               <label for="ads_con_name"> ชื่อ สกุล :</label>
               <input id="ads_con_name" name="ads_con_name" type="text" class="form-control" required autocomplete="off">
-              <div class="invalid-feedback">
+              <div class="invalid-feedback" style="font-weight: 400;">
                 กรุณากรอกชื่อ นามสกุล
               </div>
               <label for="ads_con_email"> Email :</label>
               <input id="ads_con_email" type="text" class="form-control" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
-              <div class="invalid-feedback">
+              <div class="invalid-feedback" style="font-weight: 400;">
                 กรุณากรอก Email เช่น " xxx@xxx.com "
               </div>
               <label for="ads_con_line"> Line ID :</label>
               <input id="ads_con_line" type="text" class="form-control" required autocomplete="off">
-              <div class="invalid-feedback">
+              <div class="invalid-feedback" style="font-weight: 400;">
                 กรุณากรอก Line ID
               </div>
               <label for="ads_con_tel"> เบอร์โทรศัพท์ :</label>
               <input id="ads_con_tel" type="text" class="form-control" required autocomplete="off" pattern="^0([8|9|6])([0-9]{8}$)">
-              <div class="invalid-feedback">
-                กรุณากรอก เบอร์โทรศัพท์ 10หลัก เช่น " 0600000000 "
+              <div class="invalid-feedback" style="font-weight: 400;">
+                กรุณากรอก เบอร์โทรศัพท์ 10หลัก เช่น " 06xxxxxxxx "
               </div>
 
               <label id="ads_con_all_alt">**กรุณากรอกข้อมูลให้ครบทุกช่อง</label>
