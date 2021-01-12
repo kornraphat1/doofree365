@@ -1,8 +1,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <script src="<?php echo base_url() ?>/assets/js/jwplayer.js"></script>
-    <script src="<?php echo base_url() ?>/assets/js/g23lrur.js"></script>
+    <script src="<?= $document_root ?>/assets/js/jwplayer.js"></script>
+    <script src="<?= $document_root ?>/assets/js/g23lrur.js"></script>
     <script src="https://cdn.jwplayer.com/libraries/rYlCdkEJ.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>

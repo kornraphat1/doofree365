@@ -76,7 +76,7 @@
 
                 <div class="col-md-12 col-lg-12 ">
                     <?php
-                    if (!empty($ads['pos1'])) {
+                    if (!empty($ads['pos2'])) {
                         foreach ($ads['pos2'] as $val) {
                             if (substr($val['ads_picture'], 0, 4) == 'http') {
                                 $ads_picture = $val['ads_picture'];
@@ -91,7 +91,7 @@
                         }
                     }
                     ?>
-                    <img class="banners" src="https://backend.doomovie-5g.com/public/banners/1607339579_6518d13361e4d6c3d29b.png" alt="test" title="test" style="width: 100%;">
+                    <!-- <img class="banners" src="https://backend.doomovie-5g.com/public/banners/1607339579_6518d13361e4d6c3d29b.png" alt="test" title="test" style="width: 100%;"> -->
                 </div>
 
 
@@ -153,7 +153,7 @@
             ?>
                 <div class="movie-series-content ">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="d-flex justify-content-between" style="width: 100%;">
                             <?php
                             if ($index > 0) {
                                 $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
@@ -169,10 +169,10 @@
 
                             ?>
 
-                                <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;" class="but-before">ตอนก่อนหน้า</button></a>
+                            <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;" class="but-before">ตอนก่อนหน้า</button></a>
 
 
-                                <select class="but-op" onchange="click_ep(this)">
+                            <select class="but-op" onchange="click_ep(this)">
 
                                 <?php
 
@@ -209,11 +209,7 @@
 
                             ?>
 
-<<<<<<< HEAD
-                            <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?>>ตอนถัดไป</button></a>
-=======
-                                <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; "<?= $disabled ?> class="but-before">ตอนถัดไป</button></a>
->>>>>>> f4d4572b0366928022aaf0714a3a0c44db08743b
+                            <a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?> class="but-before">ตอนถัดไป</button></a>
 
 
                         </div>

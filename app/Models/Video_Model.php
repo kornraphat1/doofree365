@@ -19,11 +19,11 @@ class Video_Model extends Model
     protected $table_vdoads = 'mo_adsvideo';
     protected $pathAdsVideo = 'movie/adsvdo';
     protected $ads = 'ads';
-    protected $report_movie = 'movie_report';
+    protected $report_movie = 'report';
     protected $live_stream = 'mo_livestream';
     protected $setting = 'setting';
     protected $content = 'content';
-    protected $mo_request = 'mo_request';
+    protected $mo_request = 'request';
     protected $mo_adscontact = 'mo_adscontact';
     protected $seo = 'seo';
     public $backURL = "https://backend.doofree365.com/public/";
@@ -38,7 +38,21 @@ class Video_Model extends Model
 
     }
 
+    public function get_ads($branch_id)
+    {
+        $ads = [];
+        $sql = "SELECT ads_position FROM  `$this->ads` WHERE branch_id = '$branch_id' group by ads_position";
+        $query = $this->db->query($sql);
+        $ads_position = $query->getResultArray();
+        foreach ($ads_position as $val) {
+            $ads_position = $val['ads_position'];
 
+            $sql = "SELECT * FROM  `$this->ads` WHERE branch_id = '$branch_id' AND ads_position =  '$ads_position' ";
+            $query = $this->db->query($sql);
+            $ads['pos' . $ads_position] = $query->getResultArray();
+        }
+        return $ads;
+    }
 
     function get_adsvideolist($backurl)
     {

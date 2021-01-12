@@ -1,0 +1,47 @@
+CRITICAL - 2021-01-12 00:00:46 --> Undefined property: App\Controllers\Home::$config
+#0 C:\xampp\htdocs\doofree\app\Controllers\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\doofree\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-12 00:06:10 --> Undefined index: pos2
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 80, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20254', 'Me-and-Me-2020')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 00:06:16 --> Undefined index: pos2
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 80, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20254', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 00:06:51 --> Undefined variable: document_root
+#0 C:\xampp\htdocs\doofree\app\Views\player.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 4, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('player', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(530): view('player', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->player('20254', 'movie_thmain', 'a')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 00:07:00 --> Undefined variable: document_root
+#0 C:\xampp\htdocs\doofree\app\Views\player.php(4): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 4, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('player', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(530): view('player', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->player('20254', 'movie_thmain', 'a')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

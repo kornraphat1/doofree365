@@ -9,7 +9,7 @@
 
         <div class="content-top">
             <div class="content-top-title">DOOFREE365</div>
-            <div class="content-top-body">DOOFREE365</div>
+            <div class="content-top-body">หนังใหม่ ดูหนังออนไลน์ ครบทุกเรื่องทุกรสที่ Doofree365</div>
         </div>
         <div class="content">
             <div class="content-title">

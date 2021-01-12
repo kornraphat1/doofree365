@@ -577,3 +577,17 @@ CRITICAL - 2021-01-11 05:51:54 --> Unknown database 'new_variety2'
 #6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2021-01-11 23:59:41 --> Undefined property: App\Controllers\Home::$config
+#0 C:\xampp\htdocs\doofree\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\doofree\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 23:59:56 --> Undefined property: App\Controllers\Home::$config
+#0 C:\xampp\htdocs\doofree\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\doofree\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
