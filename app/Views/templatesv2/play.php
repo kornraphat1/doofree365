@@ -219,93 +219,96 @@
             }
             ?>
         </div>
-            <div class="content">
-                <div class="content-title">
-                    <div class="title vl">แนะนำหนัง</div>
-                </div>
-                <div class="content-grid">
-                    <div class="content-list">
+        <div class="content">
+            <div class="content-title">
+                <div class="title vl">แนะนำหนัง</div>
+            </div>
+            <div class="content-grid">
+                <div class="content-list">
 
-                        <?php
-                        if (!empty($vdorandom)) {
-                            foreach ($vdorandom as $val) {
+                    <?php
+                    if (!empty($vdorandom)) {
+                        foreach ($vdorandom as $val) {
 
-                                $searcharray = array(' ', '!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
-                                $replacearray = array('-', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
-                                $url_name = urlencode(str_replace($searcharray, $replacearray, $val['movie_thname']));
-                                if (substr($val['movie_picture'], 0, 4) == 'http') {
-                                    $movie_picture = $val['movie_picture'];
-                                } else {
-                                    $movie_picture = $path_thumbnail . $val['movie_picture'];
-                                }
-                                $id = $val['movie_id'];
-                                if ($val['movie_type'] == 'se') {
-    
-                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $val['movie_thname'])))))));
-                                    $urlvideo = urldecode(base_url('/series/' . $id . '/' . $url_name));
-                                } else {
-                                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $val['movie_thname'])))))));
-                                    $urlvideo = urldecode(base_url('/movie/' . $id . '/' . $url_name));
-                                }
-                        ?>
-
-                                <a href="<?= $$urlvideo ?>"onclick="countView('<?= $val['movie_id'] ?>')"  class="card-content" style="background-image: url('<?= $movie_picture ?>')">
-                                    <div class="card-quality">
-                                        <div class="card-quality-style">
-                                            <?= $val['movie_quality']; ?>
-                                        </div>
-                                        <div class="card-quality-style color-hd">
-                                            <i class="fas fa-eye"></i> <?= $val['movie_view']; ?>
-                                        </div>
-                                    </div>
-                                    <div class="card-description">
-                                        <div class="card-description-content">
-
-                                            <div class="card-description-down"><?= $val['movie_thname']; ?></div>
-                                        </div>
-
-                                    </div>
-                                    <div class="card-quality-style color-star">
-                                        <?= $val['movie_ratescore']; ?>/10 <i class="fas fa-star"></i>
-                                    </div>
-                                </a>
-
-                        <?php
+                            $searcharray = array(' ', '!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
+                            $replacearray = array('-', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+                            $url_name = urlencode(str_replace($searcharray, $replacearray, $val['movie_thname']));
+                            if (substr($val['movie_picture'], 0, 4) == 'http') {
+                                $movie_picture = $val['movie_picture'];
+                            } else {
+                                $movie_picture = $path_thumbnail . $val['movie_picture'];
                             }
+                            $id = $val['movie_id'];
+                            if ($val['movie_type'] == 'se') {
+
+                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $val['movie_thname'])))))));
+                                $urlvideo = urldecode(base_url('/series/' . $id . '/' . $url_name));
+                            } else {
+                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $val['movie_thname'])))))));
+                                $urlvideo = urldecode(base_url('/movie/' . $id . '/' . $url_name));
+                            }
+                    ?>
+
+                            <a href="<?= $urlvideo ?>" onclick="countView('<?= $val['movie_id'] ?>')" class="card-content" style="background-image: url('<?= $movie_picture ?>')">
+                                <div class="card-quality">
+                                    <div class="card-quality-style">
+                                        <?= $val['movie_quality']; ?>
+                                    </div>
+                                    <div class="card-quality-style color-hd">
+                                        <i class="fas fa-eye"></i> <?= $val['movie_view']; ?>
+                                    </div>
+                                </div>
+                                <div class="card-description">
+                                    <div class="card-description-content">
+
+                                        <div class="card-description-down"><?= $val['movie_thname']; ?></div>
+                                    </div>
+
+                                </div>
+                                <div class="card-quality-style color-star">
+                                    <?= $val['movie_ratescore']; ?>/10 <i class="fas fa-star"></i>
+                                </div>
+                            </a>
+
+                    <?php
                         }
-                        ?>
+                    }
+                    ?>
 
 
-                    </div>
-
-                </div>
-                <div>
                 </div>
 
             </div>
-
+            <div>
+            </div>
 
         </div>
+
+
     </div>
+</div>
 
-    <script>
-        function click_ep(selectObject, EpName) {
-            var value = selectObject.value;
-            var urlname = selectObject.text.replace(' ', '-');
-            window.location.href = "<?= base_url() ?>/series/<?= $video_data['movie_id'] ?>/" + value + "/" + urlname;
+<script>
+    function click_ep(selectObject, EpName) {
+        var value = selectObject.value;
+        var urlname = selectObject.text.replace(' ', '-');
+        window.location.href = "<?= base_url() ?>/series/<?= $video_data['movie_id'] ?>/" + value + "/" + urlname;
 
+    }
+
+    function get_Report() {
+        var movie_id = '<?= $video_data['movie_id'] ?>';
+        var movie_name = '<?= $video_data['movie_thname'] ?>';
+        var movie_ep_name = '';
+        <?php if ($video_data['movie_type'] == 'se') { ?>
+            movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
+        <?php } ?>
+        do {
+            var request = prompt('แจ้งหนังเสีย');
         }
+        while (request.length < 1);
 
-        function get_Report() {
-            var movie_id = '<?= $video_data['movie_id'] ?>';
-            var movie_name = '<?= $video_data['movie_thname'] ?>';
-            var movie_ep_name = '';
-            <?php if ($video_data['movie_type'] == 'se') { ?>
-                movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
-            <?php } ?>
-
-            var report = prompt('แจ้งหนังเสืย');
-
+        if (request != null && request != '') {
             $.ajax({
                 url: "<?= base_url('saveReport') ?>",
                 data: {
@@ -320,5 +323,38 @@
                     alert('แจ้งเรียบร้อยจะดำเนินการโดยเร็ว');
                 }
             });
+
         }
-    </script>
+    };
+
+    // function get_Report() {
+    //     var movie_id = '<?= $video_data['movie_id'] ?>';
+    //     var movie_name = '<?= $video_data['movie_thname'] ?>';
+    //     var movie_ep_name = '';
+    //     <?php if ($video_data['movie_type'] == 'se') { ?>
+    //         movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
+    //     <?php } ?>
+
+    //     do {
+    //         var request = prompt('แจ้งหนังเสีย');
+    //     }
+    //     while (request.length < 1);
+
+    //     if (request != null && request != '') {
+    //         $.ajax({
+    //             url: "<?= base_url('saveReport') ?>",
+    //             data: {
+    //                 movie_id: movie_id,
+    //                 movie_name: movie_name,
+    //                 movie_ep_name: movie_ep_name,
+    //                 report: report
+    //             },
+    //             type: 'POST',
+    //             async: false,
+    //             success: function(data) {
+    //                 alert('แจ้งเรียบร้อยจะดำเนินการโดยเร็ว');
+    //             }
+    //         });
+    //     }
+    // }
+</script>

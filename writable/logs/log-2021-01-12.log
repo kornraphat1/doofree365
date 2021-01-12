@@ -851,3 +851,53 @@ CRITICAL - 2021-01-12 02:58:41 --> Undefined variable: value
 #6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2021-01-12 04:10:04 --> Undefined variable: http://192.168.10.39:9221/movie/7530/Occupation-มันมายึดครอง
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20244', 'Search-Out-2020')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 04:10:08 --> Undefined variable: http://192.168.10.39:9221/movie/9997/Here-We-Are:-Notes-for-Living-on-Planet-Earth-2020
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20244', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 04:10:23 --> Undefined variable: http://192.168.10.39:9221/movie/4024/King-Naresuan-1-2007-ตำนานสมเด็จพระนเรศวรมหาราช-ภาค-๑-องค์ประกันหงสา
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20244', 'Search-Out-2020')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 04:10:26 --> Undefined variable: http://192.168.10.39:9221/movie/4283/Sebastian-Maniscalco-Stay-Hungry--เซบาสเตียน-มานิสคัลโก---โหยไว้-อย่าหายอยาก-
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20244', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 04:10:30 --> Undefined variable: http://192.168.10.39:9221/movie/1403/Mad-Max-Fury-Road-ถนนโลกันต์
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(252): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 252, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20244', 'favicon.png')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
