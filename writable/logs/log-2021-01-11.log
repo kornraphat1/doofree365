@@ -637,3 +637,33 @@ CRITICAL - 2021-01-11 21:55:22 --> Undefined index: name_ep
 #6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2021-01-11 23:36:27 --> Undefined index: name_ep
+#0 C:\xampp\htdocs\doofree365\app\Views\templatesv2\play.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 139, Array)
+#1 C:\xampp\htdocs\doofree365\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree365\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree365\app\Controllers\Home.php(365): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(910): App\Controllers\Home->video('9799', 'Too-Hot-to-Hand...')
+#5 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 23:36:27 --> Undefined index: name_ep
+#0 C:\xampp\htdocs\doofree365\app\Views\templatesv2\play.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 139, Array)
+#1 C:\xampp\htdocs\doofree365\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree365\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree365\app\Controllers\Home.php(365): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(910): App\Controllers\Home->video('9799', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-11 23:36:27 --> Undefined index: name_ep
+#0 C:\xampp\htdocs\doofree365\app\Views\templatesv2\play.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 139, Array)
+#1 C:\xampp\htdocs\doofree365\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree365\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree365\app\Controllers\Home.php(365): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(910): App\Controllers\Home->video('9799', 'favicon.png')
+#5 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
