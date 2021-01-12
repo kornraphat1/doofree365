@@ -505,3 +505,349 @@ CRITICAL - 2021-01-12 00:29:10 --> Maximum execution time of 120 seconds exceede
 CRITICAL - 2021-01-12 00:29:10 --> Maximum execution time of 120 seconds exceeded
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
+CRITICAL - 2021-01-12 02:19:30 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:36 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:36 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:36 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:44 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:44 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:44 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:44 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:45 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:46 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:53 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:53 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:53 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:19:54 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:00 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:00 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:00 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:08 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:08 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:08 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:09 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:10 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:10 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:17 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:17 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:17 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:24 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:24 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:24 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:25 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:31 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:31 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:31 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:37 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:37 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:37 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:38 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:45 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:45 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:45 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:47 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:53 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:53 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:20:53 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:00 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:00 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:00 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:01 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:07 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:07 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:07 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:13 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:13 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:13 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:18 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:18 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:19 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:21 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:27 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:27 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:27 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:21:32 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 02:52:53 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:53:25 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:53:44 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:53:59 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:54:09 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:54:29 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:55:21 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:55:23 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:55:34 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:55:39 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\body.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/bod...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(83): view('templatesv2/bod...', Array)
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:57:47 --> Undefined variable: value
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(243): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 243, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20257', 'Notes-for-My-So...')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:57:50 --> Undefined variable: value
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(243): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 243, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20257', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:58:05 --> Undefined variable: id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(249): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 249, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20257', 'Notes-for-My-So...')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:58:09 --> Undefined variable: id
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(249): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 249, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20257', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:58:37 --> Undefined variable: value
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20257', 'Notes-for-My-So...')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-12 02:58:41 --> Undefined variable: value
+#0 C:\xampp\htdocs\doofree\app\Views\templatesv2\play.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\doofree\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\doofree\system\Common.php(1071): CodeIgniter\View\View->render('templatesv2/pla...', Array, true)
+#3 C:\xampp\htdocs\doofree\app\Controllers\Home.php(378): view('templatesv2/pla...')
+#4 C:\xampp\htdocs\doofree\system\CodeIgniter.php(910): App\Controllers\Home->video('20257', 'css', 'app.css')
+#5 C:\xampp\htdocs\doofree\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
