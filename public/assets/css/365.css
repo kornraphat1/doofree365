@@ -470,7 +470,7 @@
        width: 200px;
        height: 46px;
        font-size: 24px;
-       transform: translate(4px, 1px);
+       transform: translate(9px, 1px);
        background-color: #fff;
        border: none;
        color: black;
@@ -585,7 +585,14 @@
        padding-right: 0px;
    }
 
-   #movie-banners{
+   header .but-src {
+       border: none;
+       outline: none;
+       background: transparent;
+
+   }
+
+   #movie-banners {
        margin-top: 20px;
    }
 
@@ -610,12 +617,12 @@
        }
 
        header .search-text {
-        width: 80px;
-        height: 27px;
-        font-size: 15px;
-        transform: translate(-6px, 2px);
-        background-color: #fff;
-        padding: 10px;
+           width: 80px;
+           height: 27px;
+           font-size: 15px;
+           transform: translate(-6px, 2px);
+           background-color: #fff;
+           padding: 10px;
        }
 
        header .menu-bar .search .fa-search {
@@ -625,7 +632,7 @@
        }
 
        header .menu-bar {
-           height: 10%
+           height: 13%
        }
 
        header .menu-bar ul li {
@@ -817,6 +824,7 @@
    }
 
    #play .content-fail-style {
+       font-family: 'Kanit', sans-serif;
        font-size: 25px;
        color: white;
        background-color: #38b14a;
