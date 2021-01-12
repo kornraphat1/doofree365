@@ -632,13 +632,14 @@ class Home extends BaseController
 
 
 		$movie_id =  $_POST['movie_id'];
-		$movie_name = $_POST['movie_name'];
+		$movie_name = urldecode($_POST['movie_name']);
 		$movie_ep_name = $_POST['movie_ep_name'];
+		$report = urldecode($_POST['report']);
 		$datetime = date('Y-m-d H:i:s');
 
 
 
-		$result = $this->VideoModel->save_reports($this->branch, $movie_id, $movie_name, $movie_ep_name, $datetime);
+		$result = $this->VideoModel->save_reports($this->branch, $movie_id, $report,$movie_name, $movie_ep_name, $datetime);
 	}
 
 	public function list_series()
