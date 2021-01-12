@@ -64,7 +64,7 @@
                     ?>
 
                 </div>
-                <div> IMDB : <?php echo $video_data['movie_ratescore']; ?>
+                <div> IMDB : <?php echo $video_data['movie_ratescore']; ?>/10
                 </div>
                 <div> เรื่องย่อ :
                 </div>
