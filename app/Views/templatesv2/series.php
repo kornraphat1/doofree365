@@ -136,61 +136,7 @@
                     </div>
                 </div>
 
-                <div class="content">
-                    <div class="content-title">
-                        <div class="title vl">แนะนำหนัง</div>
-                    </div>
-                    <div class="content-grid">
-                        <div class="content-list">
-
-                        <?php
-                            if(!empty($vdorandom)) {
-                                foreach($vdorandom as $val) {
-
-                            $searcharray = array(' ','!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "+", "$", ",", "/", "?", "%", "#", "[", "]");
-                            $replacearray = array('-','', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
-                            $url_name = urlencode(str_replace($searcharray, $replacearray, $val['movie_thname']));
-                            if (substr($val['movie_picture'], 0, 4) == 'http') {
-                                $movie_picture = $val['movie_picture'];
-                            } else {
-                                $movie_picture = $path_thumbnail . $val['movie_picture'];
-                            }
-                        ?>
-
-                            <a href="<?=base_url('movie/'.$val['movie_id'].'/'.$url_name)?>" class="card-content" style="background-image: url('<?=$movie_picture?>')">
-                                <div class="card-quality">
-                                    <div class="card-quality-style">
-                                        <?=$val['movie_quality'];?>
-                                    </div>
-                                    <div class="card-quality-style color-hd">
-                                        <i class="fas fa-eye"></i> <?=$val['movie_view'];?>
-                                    </div>
-                                </div>
-                                <div class="card-description">
-                                    <div class="card-description-content">
-                                        <div class="card-description-nema"><?=$val['movie_thname'];?></div>
-                                        <div class="card-description-down"><?=$val['movie_thname'];?></div>
-                                    </div>
-
-                                </div>
-                                <div class="card-quality-style color-star">
-                                    <?=$val['movie_ratescore'];?>/10 <i class="fas fa-star"></i>
-                                </div>
-                            </a>
-                        
-                        <?php
-                                }
-                            }
-                        ?>
-                            
-
-                        </div>
-
-                    </div>
-                    <div>
-                    </div>
-
-                </div>
+                
 
 
             </div>

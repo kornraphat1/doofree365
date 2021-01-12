@@ -577,6 +577,22 @@ CRITICAL - 2021-01-11 05:51:54 --> Unknown database 'new_variety2'
 #6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-01-11 23:59:41 --> Undefined property: App\Controllers\Home::$config
+#0 C:\xampp\htdocs\doofree\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\doofree\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 23:59:56 --> Undefined property: App\Controllers\Home::$config
+#0 C:\xampp\htdocs\doofree\app\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\doofree\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\doofree\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\doofree\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\doofree\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
 CRITICAL - 2021-01-11 21:55:18 --> Undefined index: name_ep
 #0 C:\xampp\htdocs\doofree365\app\Views\templatesv2\play.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 139, Array)
 #1 C:\xampp\htdocs\doofree365\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -637,6 +653,7 @@ CRITICAL - 2021-01-11 21:55:22 --> Undefined index: name_ep
 #6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-01-11 23:36:27 --> Undefined index: name_ep
 #0 C:\xampp\htdocs\doofree365\app\Views\templatesv2\play.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 139, Array)
 #1 C:\xampp\htdocs\doofree365\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -667,3 +684,6 @@ CRITICAL - 2021-01-11 23:36:27 --> Undefined index: name_ep
 #6 C:\xampp\htdocs\doofree365\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\doofree365\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+=======
+>>>>>>> d5af205f83ab22f0e2200e77872e976c6ca179b1
+>>>>>>> 190cead59950b3c0250acc036a0ff80334638b48

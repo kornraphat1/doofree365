@@ -10,14 +10,16 @@ class Home extends BaseController
 	protected $base_backurl;
 	public $img_backurl = "img_movies/";
 	public $branch_id = 1;
+	public $document_root = '';
 	public $backURL = "https://backend.doofree365.com/public/";
 
 	public function __construct()
 	{
+		$this->config = new \Config\App();
 		$this->path_ads = $this->backURL . 'banner/';
 		$this->path_logo = $this->backURL . 'setting/';
+		$this->document_root = $this->config->docURL;
 
-		$config = new \Config\App();
 		// $this->base_backurl = $config->backURL;
 
 		$this->validation =  \Config\Services::validation();
@@ -37,7 +39,7 @@ class Home extends BaseController
 
 		$keyword_string = "";
 		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
-		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$list_movie_recommend = $this->VideoModel->get_movie_new_recommend($this->branch, '', $page);
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
@@ -48,7 +50,9 @@ class Home extends BaseController
 		//  print_r($category_id);die;
 
 
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'keyword_string' => $keyword_string,
@@ -75,7 +79,7 @@ class Home extends BaseController
 
 
 
-		echo view('templatesv2/header.php', $headdata);
+		echo view('templatesv2/header.php', $header_data);
 		echo view('templatesv2/body.php', $data);
 		echo view('templatesv2/footer.php');
 	}
@@ -90,7 +94,7 @@ class Home extends BaseController
 
 		$keyword_string = "";
 		$list_video_new = $this->VideoModel->get_list_video_new($this->branch, '', $page);
-		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$list_movie_recommend = $this->VideoModel->get_movie_new_recommend($this->branch, '', $page);
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
@@ -102,7 +106,9 @@ class Home extends BaseController
 
 
 
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'keyword_string' => $keyword_string,
@@ -132,7 +138,7 @@ class Home extends BaseController
 
 
 
-		echo view('templatesv2/header.php', $headdata);
+		echo view('templatesv2/header.php', $header_data);
 		echo view('templatesv2/list.php', $data);
 		echo view('templatesv2/footer.php');
 	}
@@ -151,10 +157,12 @@ class Home extends BaseController
 		$path_livesteram = $this->VideoModel->get_path_livesteram();
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$setting = $this->VideoModel->get_setting($this->branch);
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
 
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'base_backurl' => $this->base_backurl,
@@ -167,7 +175,7 @@ class Home extends BaseController
 			'setting' => $setting
 		];
 
-		echo view('templates/header', $headdata);
+		echo view('templates/header', $header_data);
 
 		$data = [
 			'movie' => $listzoom,
@@ -193,7 +201,7 @@ class Home extends BaseController
 		$cateRow = $this->VideoModel->get_caterow($id);
 		$listyear = $this->VideoModel->get_listyear($this->branch);
 
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$list_video = $this->VideoModel->get_id_video_bycategory($id, $this->branch_id, $page);
 		$path_livesteram = $this->VideoModel->get_path_livesteram();
@@ -203,7 +211,9 @@ class Home extends BaseController
 
 		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
 
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'keyword_string' => $keyword_string,
@@ -225,7 +235,7 @@ class Home extends BaseController
 			'title' => $title
 		];
 
-		echo view('templatesv2/header', $headdata);
+		echo view('templatesv2/header', $header_data);
 		echo view('templatesv2/list', $list_data_video);
 		echo view('templatesv2/footer');
 	}
@@ -253,7 +263,7 @@ class Home extends BaseController
 		];
 
 		$list_video = $this->VideoModel->get_id_video_byyear($id, $this->branch_id, $page);
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$path_livesteram = $this->VideoModel->get_path_livesteram();
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$setting = $this->VideoModel->get_setting($this->branch);
@@ -262,7 +272,9 @@ class Home extends BaseController
 
 		//  echo "<pre>";
 		//  print_R($listcontent);die;
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'keyword_string' => $keyword_string,
@@ -286,7 +298,7 @@ class Home extends BaseController
 		];
 
 
-		echo view('templates/header', $headdata);
+		echo view('templates/header', $header_data);
 		echo view('templates/search', $list_data_video);
 		echo view('templates/footer');
 	}
@@ -323,31 +335,32 @@ class Home extends BaseController
 		$setting['setting_img'] = $movie_picture;
 
 		$seo = $this->VideoModel->get_seo($this->branch);
-		if(!empty($seo)){
-			if(!empty($seo['seo_title'])){
+		if (!empty($seo)) {
+			if (!empty($seo['seo_title'])) {
 				$title = $seo['seo_title'];
 				$name_videos = $video_data['movie_thname'];
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
-								"{movie_title} - {title_web}", 
-								$name_videos . " - " . $title_name, 
-								$title
-							);
+					"{movie_title} - {title_web}",
+					$name_videos . " - " . $title_name,
+					$title
+				);
 				$setting['setting_title'] = $title_web;
 			}
-			
-			if(!empty($seo['seo_description'])){
+
+			if (!empty($seo['seo_description'])) {
 				$description = $seo['seo_description'];
 				$description_movie = $video_data['movie_des'];
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
-			
 		}
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
 
 		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'path_ads' => $this->path_ads,
@@ -382,31 +395,32 @@ class Home extends BaseController
 		$setting['setting_img'] = $movie_picture;
 
 		$seo = $this->VideoModel->get_seo($this->branch);
-		if(!empty($seo)){
-			if(!empty($seo['seo_title'])){
+		if (!empty($seo)) {
+			if (!empty($seo['seo_title'])) {
 				$title = $seo['seo_title'];
 				$name_videos = $series['movie_thname'];
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
-								"{movie_title} - {title_web}", 
-								$name_videos . " - " . $title_name, 
-								$title
-							);
+					"{movie_title} - {title_web}",
+					$name_videos . " - " . $title_name,
+					$title
+				);
 				$setting['setting_title'] = $title_web;
 			}
-			
-			if(!empty($seo['seo_description'])){
+
+			if (!empty($seo['seo_description'])) {
 				$description = $seo['seo_description'];
 				$description_movie = $series['movie_des'];
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
-			
 		}
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
 
 		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'path_ads' => $this->path_ads,
@@ -444,31 +458,32 @@ class Home extends BaseController
 		$setting['setting_img'] = $movie_picture;
 
 		$seo = $this->VideoModel->get_seo($this->branch);
-		if(!empty($seo)){
-			if(!empty($seo['seo_title'])){
+		if (!empty($seo)) {
+			if (!empty($seo['seo_title'])) {
 				$title = $seo['seo_title'];
 				$name_videos = $series['movie_thname'];
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
-								"{movie_title} - {title_web}", 
-								$name_videos . " - " . $title_name, 
-								$title
-							);
+					"{movie_title} - {title_web}",
+					$name_videos . " - " . $title_name,
+					$title
+				);
 				$setting['setting_title'] = $title_web;
 			}
-			
-			if(!empty($seo['seo_description'])){
+
+			if (!empty($seo['seo_description'])) {
 				$description = $seo['seo_description'];
 				$description_movie = $series['movie_des'];
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
-			
 		}
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
 
 		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'path_ads' => $this->path_ads,
@@ -531,7 +546,7 @@ class Home extends BaseController
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$listyear = $this->VideoModel->get_listyear($this->branch);
 		$list_video = $this->VideoModel->get_list_video_search($keyword_string, $this->branch_id, $page);
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$path_livesteram = $this->VideoModel->get_path_livesteram();
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$setting = $this->VideoModel->get_setting($this->branch);
@@ -540,7 +555,9 @@ class Home extends BaseController
 
 		//  echo "<pre>";
 		//  print_R($listcontent);die;
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'keyword_string' => $keyword_string,
@@ -565,7 +582,7 @@ class Home extends BaseController
 		];
 
 
-		echo view('templatesv2/header', $headdata);
+		echo view('templatesv2/header', $header_data);
 
 		echo view('templatesv2/list', $list_data_video);
 		echo view('templatesv2/footer');
@@ -593,7 +610,7 @@ class Home extends BaseController
 	public function save_requests()
 	{
 		$request_text = $_POST['request_text'];
-// echo '<pre>',print_r($request_text,true),'</pre>';die;
+		// echo '<pre>',print_r($request_text,true),'</pre>';die;
 		$this->VideoModel->save_requests($this->branch, $request_text);
 	}
 
@@ -631,7 +648,7 @@ class Home extends BaseController
 		}
 
 		$list_video = $this->VideoModel->get_list_video_series($this->branch_id, $page);
-
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$keyword_string = "";
 		$category_id = $this->VideoModel->get_category($this->branch);
 		// $cateRow = $this->VideoModel->get_caterow($id);
@@ -644,7 +661,9 @@ class Home extends BaseController
 
 		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
 
-		$headdata = [
+		$header_data = [
+			'document_root' => $this->document_root,
+			'ads' => $ads,
 			'backURL' => $this->backURL,
 			'branch' => $this->branch,
 			'keyword_string' => $keyword_string,
@@ -664,17 +683,19 @@ class Home extends BaseController
 			'title' => $title
 		];
 
-		echo view('templates/header', $headdata);
+		echo view('templates/header', $header_data);
 		echo view('templates/search', $list_data_video);
 		echo view('templates/footer');
 	}
 
 	public function contract() //ต้นแบบ หน้า cate / search
 	{
+
 		$setting = $this->VideoModel->get_setting($this->branch);
 		// $setting['setting_img'] = $this->path_setting . $setting['setting_logo'];
-		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$ads = $this->VideoModel->get_ads($this->branch);
 		$header_data = [
+			'document_root' => $this->document_root,
 			'backURL' => $this->backURL,
 			// 'document_root' => $this->document_root,
 			// 'path_thumbnail' => $this->path_thumbnail,
@@ -697,5 +718,4 @@ class Home extends BaseController
 	{
 		$this->VideoModel->movie_view($movie_id, $branch);
 	}
-	
 }

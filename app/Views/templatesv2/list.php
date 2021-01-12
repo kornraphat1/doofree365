@@ -10,7 +10,7 @@
 
         <div class="content-top">
             <div class="content-top-title">DOOFREE365</div>
-            <div class="content-top-body">DOOFREE365</div>
+            <div class="content-top-body">หนังใหม่ ดูหนังออนไลน์ ครบทุกเรื่องทุกรสที่ Doofree365</div>
         </div>
         <div class="content">
             <div class="content-title">
@@ -21,6 +21,7 @@
                     <?php
 
                     if (!empty($paginate['list'])) {
+                      
                         foreach ($paginate['list'] as $key => $value) {
 
                             $id = $value['movie_id'];
@@ -48,7 +49,7 @@
                                 $display = "green";
                             }
                     ?>
-                            <a href="<?php echo $urlvideo; ?>"  class="card-content" style="background-image: url('<?php echo $value['movie_picture']; ?>')"alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                            <a href="<?php echo $urlvideo; ?>" class="card-content" style="background-image: url('<?php echo $value['movie_picture']; ?>')" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
                                 <div class="card-quality">
                                     <div class="card-quality-style" style=" background-color: <?php echo $display; ?>;">
                                         <?php echo strtoupper($value['movie_quality']); ?>
@@ -64,7 +65,7 @@
                                 </div>
                                 <div class="card-description">
                                     <div class="card-description-content">
-                                        <div class="card-description-nema"><?php echo $value['movie_sound'] . ' ' . $value['movie_quality'] . ' (' . $value['movie_year'].')'; ?></div>
+                                        <div class="card-description-nema"><?php echo $value['movie_sound'] . ' ' . $value['movie_quality'] . ' (' . $value['movie_year'] . ')'; ?></div>
                                         <div class="card-description-down"><?php echo $value['movie_thname']; ?></div>
                                     </div>
 
@@ -87,8 +88,10 @@
 
 
         </div>
+        <?php if ($paginate['total_page'] > 1) {
+        ?>
 
-        <div class="content-main">
+            <div class="content-main">
                 <div class="box">
                     <div class="navigation">
                         <ul>
@@ -101,6 +104,11 @@
                     </div>
                 </div>
             </div>
+
+
+        <?php
+        }
+        ?>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
