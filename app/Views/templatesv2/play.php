@@ -104,7 +104,7 @@
                 </a>
                 <div></div>
                 <div></div>
-                <button class="content-fail-style" onclick="get_Report();">แจ้งเสีย</button>
+                <button class="content-fail-style" onclick="get_Report();">แจ้งหนังเสีย</button>
 
                 <div class="fa-style">
                     <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=<?= urlencode(base_url(uri_string())) ?>&display=popup&ref=plugin&src=share_button" target="_blank">
@@ -122,8 +122,8 @@
             </div>
 
             <div class="content-video-display">
-                <a class="color-play"> <?php echo (!empty($sound) ? $sound : "-"); ?>
-                </a>
+                <!-- <a class="color-play"> <?php echo (!empty($sound) ? $sound : "-"); ?>
+                </a> -->
                 <div></div>
                 <div></div>
                 <div>

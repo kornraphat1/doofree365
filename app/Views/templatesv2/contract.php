@@ -66,8 +66,8 @@
 
     @media only screen and (max-width: 600px) {
       .style-box {
-        background-color: white;
-        width: 90%;
+        background-color: white !important;
+        width: 80% !important;
       }
 
       #movie-contract .nav-pills .nav-link {
