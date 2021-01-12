@@ -25,8 +25,8 @@ class App extends BaseConfig
 	*/
 	// public $baseURL = 'http://doonungset1.varietyphp.com/';
 	// public $baseURL = 'http://doofree365.com/public/';
-	public $baseURL = 'http://192.168.10.39:9221/';
-	public $docURL = 'http://192.168.10.39:9221/public';
+	public $baseURL = 'http://localhost:9221/';
+	public $docURL = 'http://localhost:9221/public';
 	/*
 	|--------------------------------------------------------------------------
 	| Index File
