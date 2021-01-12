@@ -62,8 +62,7 @@
                         echo "-";
                     }
                     ?>
-                    <div class="video-content"> <iframe class="movie-trailer" src="<?= $urlyb ?>" frameborder="0" allowfullscreen=""></iframe>
-                    </div>
+
                 </div>
                 <div> IMDB : <?php echo $video_data['movie_ratescore']; ?>
                 </div>
